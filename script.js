@@ -470,3 +470,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+document.getElementById("waForm")?.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const event = document.getElementById("event").value;
+    const date = document.getElementById("date").value;
+    const message = document.getElementById("message").value;
+
+    const phoneNumber = "6281234567890"; // GANTI NOMOR KAMU
+
+    const text =
+`Halo Runaway Studio 👋
+Saya ingin booking:
+
+Nama: ${name}
+Event: ${event}
+Tanggal: ${date}
+Pesan: ${message}`;
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+});
