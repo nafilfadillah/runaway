@@ -495,28 +495,31 @@ Pesan: ${message}`;
     window.open(url, "_blank");
 });
 
-function bookWA() {
+function sendToWA(event) {
+    event.preventDefault();
 
     const nomor = "6285774447910";
 
-    const pesan = `
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const date = document.getElementById("date").value;
+    const message = document.getElementById("message").value;
+
+    const text = `
 Halo Runaway Studio 👋
 
-Saya ingin booking sesi fotografi/videografi.
+Saya ingin menghubungi Anda:
 
 ━━━━━━━━━━━━━━
-DATA CUSTOMER
+Nama   : ${name}
+Email  : ${email}
+Tanggal: ${date}
 ━━━━━━━━━━━━━━
-Nama      :
-Tanggal   :
-Lokasi    :
-Acara     :
-Paket     : (opsional)
-━━━━━━━━━━━━━━
-Catatan tambahan:
+Pesan:
+${message}
 `;
 
-    const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+    const url = `https://wa.me/${nomor}?text=${encodeURIComponent(text)}`;
 
     window.open(url, "_blank");
 }
