@@ -1421,98 +1421,97 @@ font-size:2rem;
         CONTACT
 =================================== */
 
+/* ===========================
+        CONTACT SECTION
+=========================== */
+
 #contact{
-
-    background:#070b14;
-
+    background: #070b14;
+    padding: 120px 8%;
 }
 
+/* GRID LAYOUT */
 .contact-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:60px;
-
-    align-items:start;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    align-items: start;
 }
 
+/* INFO SIDE */
 .contact-info h3{
-
-    font-size:2rem;
-
-    margin-bottom:25px;
-
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #fff;
 }
 
 .contact-info p{
-
-    margin-bottom:18px;
-
-    color:var(--muted);
-
+    margin-bottom: 18px;
+    color: var(--muted);
+    line-height: 1.6;
 }
 
 .contact-info i{
-
-    color:var(--primary);
-
-    margin-right:10px;
-
+    color: var(--primary);
+    margin-right: 10px;
 }
 
+/* FORM */
 .contact-form{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+/* INPUT & TEXTAREA */
 .contact-form input,
 .contact-form textarea{
+    width: 100%;
+    padding: 16px 18px;
 
-    background:rgba(255,255,255,.05);
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
 
-    border:1px solid rgba(255,255,255,.08);
+    color: #fff;
+    outline: none;
 
-    color:#fff;
-
-    border-radius:15px;
-
-    padding:18px;
-
-    outline:none;
-
-    transition:.3s;
-
+    transition: .3s ease;
+    font-size: 0.95rem;
 }
 
+/* TEXTAREA SIZE */
 .contact-form textarea{
-
-    min-height:180px;
-
-    resize:none;
-
+    min-height: 160px;
+    resize: none;
 }
 
+/* FOCUS EFFECT */
 .contact-form input:focus,
 .contact-form textarea:focus{
-
-    border-color:var(--primary);
-
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(212,175,55,.1);
 }
 
+/* BUTTON */
 .contact-form button{
+    border: none;
+    cursor: pointer;
+}
 
-    border:none;
+/* ===========================
+        RESPONSIVE
+=========================== */
 
-    cursor:pointer;
+@media(max-width: 991px){
+    .contact-grid{
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 
+    #contact{
+        padding: 100px 5%;
+    }
 }
 
 /* ===================================
