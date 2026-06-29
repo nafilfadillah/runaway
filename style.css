@@ -2180,3 +2180,108 @@ CTA
     margin-bottom: 35px;
     opacity: .8;
 }
+
+/* =========================
+ABOUT US SECTION
+========================= */
+
+.about-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    margin-top:60px;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 25px 60px rgba(0,0,0,.5);
+}
+
+.about-content h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+    font-family:'Playfair Display',serif;
+}
+
+.about-content p{
+    color:var(--muted);
+    margin-bottom:20px;
+    line-height:1.8;
+}
+
+/* STATS */
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:30px;
+}
+
+.about-grid div{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    transition:.3s;
+}
+
+.about-grid div:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+}
+
+.about-grid h3{
+    color:var(--primary);
+    font-size:2rem;
+}
+
+/* VISION MISSION */
+.vision-mission{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-top:80px;
+}
+
+.vm-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter:blur(20px);
+    transition:.3s;
+}
+
+.vm-card:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+}
+
+.vm-card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+    font-size:1.5rem;
+}
+
+.vm-card p{
+    color:var(--muted);
+    line-height:1.8;
+}
+
+/* RESPONSIVE */
+@media(max-width:991px){
+    .about-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .vision-mission{
+        grid-template-columns:1fr;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+}
