@@ -2157,3 +2157,81 @@ ABOUT PAGE
         font-size:2.8rem;
     }
 }
+
+/* ================= GALLERY PRO ================= */
+
+.portfolio-section{
+    padding:120px 8%;
+}
+
+.portfolio-filter{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+}
+
+.portfolio-filter button{
+    padding:10px 22px;
+    border-radius:30px;
+    border:none;
+    background:rgba(255,255,255,.06);
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.portfolio-filter button.active,
+.portfolio-filter button:hover{
+    background:var(--primary);
+    color:#111;
+}
+
+/* MASONRY STYLE */
+.portfolio-grid{
+    column-count:3;
+    column-gap:20px;
+}
+
+.portfolio-item{
+    break-inside:avoid;
+    margin-bottom:20px;
+    position:relative;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.portfolio-item img{
+    width:100%;
+    display:block;
+    transition:.5s;
+    border-radius:20px;
+}
+
+.portfolio-item:hover img{
+    transform:scale(1.08);
+    filter:brightness(.6);
+}
+
+/* OVERLAY */
+.portfolio-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:20px;
+    background:linear-gradient(transparent, rgba(0,0,0,.9));
+    opacity:0;
+    transition:.3s;
+}
+
+.portfolio-item:hover .portfolio-overlay{
+    opacity:1;
+}
+
+.portfolio-overlay h3{
+    color:var(--primary);
+    font-size:1.3rem;
+}
