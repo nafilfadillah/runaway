@@ -2182,15 +2182,35 @@ CTA
 }
 
 /* =========================
-ABOUT US SECTION
+ABOUT PAGE
 ========================= */
+
+.about-hero{
+    padding:180px 8% 80px;
+    text-align:center;
+}
+
+.about-hero h1{
+    font-size:4rem;
+    font-family:'Playfair Display',serif;
+}
+
+.about-hero p{
+    max-width:700px;
+    margin:20px auto 0;
+    color:var(--muted);
+}
+
+/* MAIN */
+.about-page{
+    padding:80px 8% 120px;
+}
 
 .about-wrapper{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:60px;
     align-items:center;
-    margin-top:60px;
 }
 
 .about-image img{
@@ -2199,6 +2219,7 @@ ABOUT US SECTION
     box-shadow:0 25px 60px rgba(0,0,0,.5);
 }
 
+/* CONTENT */
 .about-content h2{
     font-size:2.5rem;
     margin-bottom:20px;
@@ -2225,12 +2246,6 @@ ABOUT US SECTION
     padding:25px;
     border-radius:18px;
     text-align:center;
-    transition:.3s;
-}
-
-.about-grid div:hover{
-    transform:translateY(-8px);
-    border-color:var(--primary);
 }
 
 .about-grid h3{
@@ -2252,18 +2267,11 @@ ABOUT US SECTION
     padding:40px;
     border-radius:25px;
     backdrop-filter:blur(20px);
-    transition:.3s;
-}
-
-.vm-card:hover{
-    transform:translateY(-10px);
-    border-color:var(--primary);
 }
 
 .vm-card h3{
     color:var(--primary);
     margin-bottom:15px;
-    font-size:1.5rem;
 }
 
 .vm-card p{
@@ -2283,5 +2291,9 @@ ABOUT US SECTION
 
     .about-grid{
         grid-template-columns:1fr;
+    }
+
+    .about-hero h1{
+        font-size:2.8rem;
     }
 }
