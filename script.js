@@ -453,7 +453,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==============================
     const wa = document.createElement("a");
 
-    wa.href = "https://wa.me/6281234567890";
+    wa.href = "https://wa.me/6285774447910";
     wa.target = "_blank";
     wa.className = "whatsapp";
     wa.innerHTML = '<i class="fab fa-whatsapp"></i>';
