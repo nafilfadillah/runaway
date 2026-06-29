@@ -499,13 +499,20 @@ function bookWA() {
 
     const nomor = "6285774447910";
 
-    const pesan = 
-`Halo, saya ingin booking sesi fotografi/videografi.
+    const pesan = `
+Halo Runaway Studio 👋
 
-Nama:
-Tanggal:
-Lokasi:
-Jenis acara:
+Saya ingin booking sesi fotografi/videografi.
+
+━━━━━━━━━━━━━━
+DATA CUSTOMER
+━━━━━━━━━━━━━━
+Nama      :
+Tanggal   :
+Lokasi    :
+Acara     :
+Paket     : (opsional)
+━━━━━━━━━━━━━━
 Catatan tambahan:
 `;
 
