@@ -494,3 +494,22 @@ Pesan: ${message}`;
 
     window.open(url, "_blank");
 });
+
+function bookWA() {
+
+    const nomor = "6285774447910";
+
+    const pesan = 
+`Halo, saya ingin booking sesi fotografi/videografi.
+
+Nama:
+Tanggal:
+Lokasi:
+Jenis acara:
+Catatan tambahan:
+`;
+
+    const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+
+    window.open(url, "_blank");
+}
