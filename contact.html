@@ -1,4 +1,4 @@
-<section class="contact">
+<section id="contact">
 
     <div class="container">
 
@@ -7,7 +7,7 @@
             <p>Fill the form and we will contact you via WhatsApp</p>
         </div>
 
-        <form id="waForm" class="contact-form">
+        <form class="contact-form" onsubmit="sendToWA(event)">
 
             <input type="text" id="name" placeholder="Your Name" required>
 
@@ -22,48 +22,6 @@
             </button>
 
         </form>
-
-    </div>
-
-</section>
-
-<section id="contact">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h1>Contact Us</h1>
-            <p>Get in touch & book your session</p>
-        </div>
-
-        <div class="contact-grid">
-
-            <!-- INFO -->
-            <div class="contact-info">
-                <h3>Runaway Studio</h3>
-                <p>Photography • Videography • Creative Studio</p>
-
-                <p><i class="fa fa-phone"></i> 0857-7444-7910</p>
-                <p><i class="fa fa-envelope"></i> runawaystudio@gmail.com</p>
-                <p><i class="fa fa-location-dot"></i> Indonesia</p>
-            </div>
-
-            <!-- FORM -->
-            <form class="contact-form" onsubmit="sendToWA(event)">
-
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email">
-                <input type="text" id="date" placeholder="Event Date">
-                
-                <textarea id="message" placeholder="Your Message" required></textarea>
-
-                <button type="submit" class="btn btn-primary">
-                    Send via WhatsApp
-                </button>
-
-            </form>
-
-        </div>
 
     </div>
 
