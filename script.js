@@ -515,3 +515,20 @@ Pesan: ${message}`;
 
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank");
 }
+
+function bookWA(packageName){
+
+    const phone = "6285774447910";
+
+    const text =
+`Halo Runaway Studio 👋
+
+Saya ingin booking:
+
+Paket: ${packageName}
+
+Mohon info ketersediaan jadwal & detail harga.
+Terima kasih 🙏`;
+
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank");
+}
