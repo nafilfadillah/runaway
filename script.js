@@ -495,30 +495,23 @@ Pesan: ${message}`;
     window.open(url, "_blank");
 });
 
-function sendToWA(event) {
-    event.preventDefault();
-
-    const nomor = "6285774447910";
+function sendToWA(e){
+    e.preventDefault();
 
     const name = document.getElementById("name").value;
-    const eventType = document.getElementById("event").value;
+    const event = document.getElementById("event").value;
     const date = document.getElementById("date").value;
     const message = document.getElementById("message").value;
 
-    const text = `
-Halo Runaway Studio 👋
+    const phone = "6285774447910";
 
-Saya ingin booking session:
+    const text =
+`Halo Runaway Studio 👋
 
-Nama   : ${name}
-Acara  : ${eventType}
+Nama: ${name}
+Event: ${event}
 Tanggal: ${date}
+Pesan: ${message}`;
 
-Pesan:
-${message}
-`;
-
-    const url = `https://wa.me/${nomor}?text=${encodeURIComponent(text)}`;
-
-    window.open(url, "_blank");
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank");
 }
