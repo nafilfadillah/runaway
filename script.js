@@ -494,20 +494,31 @@ Pesan: ${message}`;
 
     window.open(url, "_blank");
 });
-function bookWA() {
+
+function sendToWA(event) {
+    event.preventDefault();
 
     const nomor = "6285774447910";
 
-    const pesan = `Halo Runaway Studio 👋
+    const name = document.getElementById("name").value;
+    const eventType = document.getElementById("event").value;
+    const date = document.getElementById("date").value;
+    const message = document.getElementById("message").value;
 
-Saya ingin booking sesi foto/videografi.
+    const text = `
+Halo Runaway Studio 👋
 
-Nama:
-Tanggal:
-Lokasi:
+Saya ingin booking session:
+
+Nama   : ${name}
+Acara  : ${eventType}
+Tanggal: ${date}
+
+Pesan:
+${message}
 `;
 
-    const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+    const url = `https://wa.me/${nomor}?text=${encodeURIComponent(text)}`;
 
     window.open(url, "_blank");
 }
