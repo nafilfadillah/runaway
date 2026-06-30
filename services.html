@@ -2,230 +2,119 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Runaway Studio</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-<title>Services | Runaway Studio</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+    <link rel="icon" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
 <body>
 
-<!-- Navbar -->
-
-<nav class="navbar">
-
-<div class="logo">
-
-RUNAWAY
-
-</div>
-
-<div class="nav-links">
-
-<a href="index.html">Home</a>
-
-<a href="gallery.html">Gallery</a>
-
-<a href="services.html" class="active">Services</a>
-
-<a href="pricing.html">Pricing</a>
-
-<a href="about.html">About</a>
-
-<a href="contact.html">Contact</a>
-
-</div>
-
-</nav>
-
-<!-- Hero -->
-
-<section class="services-hero">
-
-<h1>
-
-Our Services
-
-</h1>
-
-<p>
-
-Professional Photography & Videography Services
-for Every Special Moment.
-
-</p>
-
-</section>
-
-<!-- Services -->
-
-<section class="services">
-
-<div class="service-grid">
-
-<div class="service-card">
-
-<i class="fa-solid fa-ring"></i>
-
-<h3>Wedding Photography</h3>
-
-<p>
-
-Capture every precious moment of your wedding day
-with timeless photography.
-
-</p>
-
-<a href="pricing.html" class="btn btn-primary">
-
-View Package
-
-</a>
-
-</div>
-
-<div class="service-card">
-
-<i class="fa-solid fa-video"></i>
-
-<h3>Cinematic Videography</h3>
-
-<p>
-
-Beautiful cinematic wedding films and event videos
-with professional editing.
-
-</p>
-
-<a href="pricing.html" class="btn btn-primary">
-
-View Package
-
-</a>
-
-</div>
-
-<div class="service-card">
-
-<i class="fa-solid fa-graduation-cap"></i>
-
-<h3>Graduation Session</h3>
-
-<p>
-
-Celebrate your graduation with elegant portrait
-photography.
-
-</p>
-
-<a href="pricing.html" class="btn btn-primary">
-
-View Package
-
-</a>
-
-</div>
-
-<div class="service-card">
-
-<i class="fa-solid fa-camera"></i>
-
-<h3>Event Documentation</h3>
-
-<p>
-
-Seminars, birthdays, concerts, corporate events,
-and private celebrations.
-
-</p>
-
-<a href="pricing.html" class="btn btn-primary">
-
-View Package
-
-</a>
-
-</div>
-
-<div class="service-card">
-
-<i class="fa-solid fa-box"></i>
-
-<h3>Product Photography</h3>
-
-<p>
-
-Professional product photos for marketplace,
-social media, and branding.
-
-</p>
-
-<a href="pricing.html" class="btn btn-primary">
-
-View Package
-
-</a>
-
-</div>
-
-<div class="service-card">
-
-<i class="fa-solid fa-helicopter"></i>
-
-<h3>Drone Aerial Shot</h3>
-
-<p>
-
-Aerial photo & video with cinematic drone footage
-for weddings and commercial projects.
-
-</p>
-
-<a href="pricing.html" class="btn btn-primary">
-
-View Package
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta">
-
-<h2>
-
-Let's Capture Your Best Moment
-
-</h2>
-
-<p>
-
-Book your photography session today.
-
-</p>
-
-<a href="contact.html" class="btn btn-primary">
-
-Book Now
-
-</a>
-
-</section>
-
-<script src="script.js"></script>
+    <div class="background-blur blur1"></div>
+    <div class="background-blur blur2"></div>
+    <canvas id="particles"></canvas>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                RUNAWAY
+            </div>
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="services-hero">
+        <h1 data-aos="fade-up">Our Services</h1>
+        <p data-aos="fade-up" data-aos-delay="300">
+            Professional Photography & Videography Services for Every Special Moment.
+        </p>
+    </section>
+
+    <section class="services">
+        <div class="service-grid">
+
+            <div class="service-card" data-aos="zoom-in">
+                <i class="fa-solid fa-ring"></i>
+                <h3>Wedding Photography</h3>
+                <p>Capture every precious moment of your wedding day with timeless photography.</p>
+                <a href="pricing.html" class="btn-primary">View Package</a>
+            </div>
+
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fa-solid fa-video"></i>
+                <h3>Cinematic Videography</h3>
+                <p>Beautiful cinematic wedding films and event videos with professional editing.</p>
+                <a href="pricing.html" class="btn-primary">View Package</a>
+            </div>
+
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Graduation Session</h3>
+                <p>Celebrate your graduation with elegant portrait photography.</p>
+                <a href="pricing.html" class="btn-primary">View Package</a>
+            </div>
+
+            <div class="service-card" data-aos="zoom-in">
+                <i class="fa-solid fa-camera"></i>
+                <h3>Event Documentation</h3>
+                <p>Seminars, birthdays, concerts, corporate events, and private celebrations.</p>
+                <a href="pricing.html" class="btn-primary">View Package</a>
+            </div>
+
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fa-solid fa-box"></i>
+                <h3>Product Photography</h3>
+                <p>Professional product photos for marketplace, social media, and branding.</p>
+                <a href="pricing.html" class="btn-primary">View Package</a>
+            </div>
+
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-solid fa-helicopter"></i>
+                <h3>Drone Aerial Shot</h3>
+                <p>Aerial photo & video with cinematic drone footage for weddings and commercial projects.</p>
+                <a href="pricing.html" class="btn-primary">View Package</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2 data-aos="fade-up">Let's Capture Your Best Moment</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Book your photography session today.</p>
+        <a href="contact.html" class="btn-primary" data-aos="zoom-in" data-aos-delay="400">Book Now</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Runaway Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="script.js"></script>
 
 </body>
-
 </html>
