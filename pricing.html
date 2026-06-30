@@ -6,24 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing | Runaway Studio</title>
 
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="assets/logo.png">
+    <!-- Favicon & Stylesheet -->
+    <link rel="icon" href="assets/logo.png" alt="Runaway Studio Logo">
     <link rel="stylesheet" href="style.css">
     
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     
+    <!-- AOS Animation CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
 <body>
 
+    <!-- Background Effects -->
     <div class="background-blur blur1"></div>
     <div class="background-blur blur2"></div>
     <canvas id="particles"></canvas>
 
+    <!-- Navbar -->
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -40,6 +46,17 @@
         </nav>
     </header>
 
+    <!-- Hero Pricing -->
+    <section class="pricing-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Pricing Packages</h1>
+            <p data-aos="fade-up" data-aos-delay="200">
+                Choose the perfect package for your unforgettable moments.
+            </p>
+        </div>
+    </section>
+
+    <!-- PRICING -->
     <section class="pricing">
         <div class="container">
 
@@ -50,38 +67,67 @@
 
             <div class="pricing-grid">
 
+                <!-- Bronze Package -->
                 <div class="price-card" data-aos="zoom-in" data-aos-delay="100">
                     <h3>Bronze Package</h3>
                     <h2>Rp999K</h2>
                     <p>Basic documentation for small events</p>
-                    <a href="#" class="btn-primary" onclick="bookWA('Bronze Package')">
+                    
+                    <ul>
+                        <li><i class="fa fa-check"></i> 2 Hours Session</li>
+                        <li><i class="fa fa-check"></i> 80 Edited Photos</li>
+                        <li><i class="fa fa-check"></i> Google Drive Delivery</li>
+                        <li><i class="fa fa-check"></i> Basic Color Correction</li>
+                    </ul>
+
+                    <a href="javascript:void(0)" class="btn-primary" onclick="bookWA('Bronze Package')">
                         Book Now
                     </a>
                 </div>
 
+                <!-- Silver Package (Popular) -->
                 <div class="price-card popular" data-aos="zoom-in" data-aos-delay="300">
                     <div class="badge">Most Popular</div>
                     <h3>Silver Package</h3>
                     <h2>Rp2.499K</h2>
                     <p>Perfect for weddings & medium events</p>
-                    <a href="#" class="btn-primary" onclick="bookWA('Silver Package')">
+                    
+                    <ul>
+                        <li><i class="fa fa-check"></i> 4 Hours Session</li>
+                        <li><i class="fa fa-check"></i> 150 Edited Photos</li>
+                        <li><i class="fa fa-check"></i> Cinematic Video</li>
+                        <li><i class="fa fa-check"></i> Drone Footage</li>
+                    </ul>
+
+                    <a href="javascript:void(0)" class="btn-primary" onclick="bookWA('Silver Package')">
                         Book Now
                     </a>
                 </div>
 
+                <!-- Gold Package -->
                 <div class="price-card" data-aos="zoom-in" data-aos-delay="500">
                     <h3>Gold Package</h3>
                     <h2>Rp4.999K</h2>
                     <p>Full professional cinematic coverage</p>
-                    <a href="#" class="btn-primary" onclick="bookWA('Gold Package')">
+                    
+                    <ul>
+                        <li><i class="fa fa-check"></i> Full Day Coverage</li>
+                        <li><i class="fa fa-check"></i> 2 Photographers</li>
+                        <li><i class="fa fa-check"></i> Videographer</li>
+                        <li><i class="fa fa-check"></i> Premium Album</li>
+                        <li><i class="fa fa-check"></i> Same Day Edit</li>
+                    </ul>
+
+                    <a href="javascript:void(0)" class="btn-primary" onclick="bookWA('Gold Package')">
                         Book Now
                     </a>
                 </div>
 
             </div>
 
+            <!-- GLOBAL BUTTON -->
             <div style="text-align:center; margin-top:60px;" data-aos="fade-up" data-aos-delay="600">
-                <a href="#" class="btn-primary" onclick="bookWA('General Inquiry')">
+                <a href="javascript:void(0)" class="btn-primary" onclick="bookWA('General Inquiry')">
                     Chat & Book via WhatsApp
                 </a>
             </div>
@@ -89,12 +135,35 @@
         </div>
     </section>
 
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2 data-aos="fade-up">Ready to Capture Your Special Moments?</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+            Contact us today and let's create unforgettable memories together.
+        </p>
+        <a href="contact.html" class="btn-primary" data-aos="zoom-in" data-aos-delay="400">
+            Book Your Session
+        </a>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Runaway Studio. All Rights Reserved.</p>
+        <h2>RUNAWAY</h2>
+        <p>Capturing Moments. Creating Memories.</p>
+        
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
+        
+        <p class="copyright">
+            &copy; 2026 Runaway Studio. All Rights Reserved.
+        </p>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
