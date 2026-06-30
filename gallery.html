@@ -2,302 +2,256 @@
 <html lang="en">
 
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Runaway Studio</title>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
-rel="stylesheet">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/logo.png" alt="Runaway Studio Logo">
 
-<title>Gallery | Runaway Studio</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-<!-- FAVICON -->
-<link rel="icon" type="image/png" href="assets/logo.png">
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-<!-- AOS -->
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
 <body>
 
-<!-- PRELOADER -->
-<div id="preloader">
-    <div class="loader"></div>
-</div>
-
-<!-- PARTICLES -->
-<div class="background-blur blur1"></div>
-<div class="background-blur blur2"></div>
-    
-<canvas id="particles"></canvas>
-
-<!-- NAVBAR -->
-<header>
-
-<nav class="navbar">
-
-<div class="logo">
-RUNAWAY
-</div>
-
-<div class="nav-menu">
-
-<a href="index.html">Home</a>
-<a href="gallery.html" class="active">Gallery</a>
-<a href="services.html">Services</a>
-<a href="pricing.html">Pricing</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-
-</div>
-
-</nav>
-
-</header>
-
-<!-- HERO -->
-<section class="gallery-hero">
-
-<div class="overlay"></div>
-
-<div class="container">
-
-<h1 data-aos="fade-up">
-
-Our Portfolio
-
-</h1>
-
-<p
-data-aos="fade-up"
-data-aos-delay="300">
-
-Every picture tells a story.
-Every frame preserves a memory.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- FILTER -->
-<section class="portfolio-section">
-
-    <div class="container">
-
-        <!-- FILTER BUTTON -->
-        <div class="portfolio-filter" data-aos="fade-up">
-
-            <button class="active" data-filter="all">All</button>
-            <button data-filter="Wedding">Wedding</button>
-            <button data-filter="Prewedding">Prewedding</button>
-            <button data-filter="Graduation">Graduation</button>
-            <button data-filter="Event">Event</button>
-            <button data-filter="Commercial">Commercial</button>
-            <button data-filter="Drone">Drone</button>
-
-        </div>
-
-        <!-- GALLERY -->
-        <div class="portfolio-grid">
-
-            <div class="portfolio-item" data-category="Wedding">
-                <img src="images/gallery1.jpg" alt="Wedding Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Wedding</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="Wedding">
-                <img src="images/gallery2.jpg" alt="Wedding Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Wedding</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="Graduation">
-                <img src="images/gallery3.jpg" alt="Graduation Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Graduation</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="Graduation">
-                <img src="images/gallery4.jpg" alt="Graduation Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Graduation</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="Commercial">
-                <img src="images/gallery5.jpg" alt="Commercial Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Commercial</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="Event">
-                <img src="images/gallery6.jpg" alt="Event Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Event</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="Drone">
-                <img src="images/gallery7.jpg" alt="Drone Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Drone</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="Commercial">
-                <img src="images/gallery8.jpg" alt="Commercial Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Commercial</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="Prewedding">
-                <img src="images/gallery9.jpg" alt="Prewedding Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Prewedding</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="Prewedding">
-                <img src="images/gallery10.jpg" alt="Prewedding Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Prewedding</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="Event">
-                <img src="images/gallery11.jpg" alt="Event Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Event</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="Drone">
-                <img src="images/gallery12.jpg" alt="Drone Photography" loading="lazy">
-                <div class="portfolio-overlay">
-                    <h3>Drone</h3>
-                    <p>Click to View</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div class="gallery-bottom" data-aos="fade-up">
-
-            <a href="contact.html" class="btn-primary">
-                Book Your Session
-            </a>
-
-        </div>
-
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader"></div>
     </div>
 
-</section>
+    <!-- Background Effects -->
+    <div class="background-blur blur1"></div>
+    <div class="background-blur blur2"></div>
+    <canvas id="particles"></canvas>
 
-<div id="lightbox">
-    <span id="closeLightbox">&times;</span>
-    <img id="lightbox-img" src="" alt="Preview">
-</div>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                RUNAWAY
+            </div>
+            
+            <!-- Hamburger Button untuk Mobile View -->
+            <div id="menu-btn" class="fas fa-bars"></div>
+            
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="services.html">Services</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-    <!-- CTA -->
-    <div class="gallery-bottom" data-aos="fade-up">
+    <!-- HERO -->
+    <section class="gallery-hero">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1 data-aos="fade-up">Our Portfolio</h1>
+            <p data-aos="fade-up" data-aos-delay="300">
+                Every picture tells a story. Every frame preserves a memory.
+            </p>
+        </div>
+    </section>
 
-        <a href="pricing.html" class="btn btn-primary">
-            Book Your Session
-        </a>
+    <!-- FILTER & GALLERY SECTION -->
+    <section class="portfolio-section">
+        <div class="container">
 
+            <!-- FILTER BUTTONS -->
+            <div class="portfolio-filter" data-aos="fade-up">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="Wedding">Wedding</button>
+                <button data-filter="Prewedding">Prewedding</button>
+                <button data-filter="Graduation">Graduation</button>
+                <button data-filter="Football">Football</button>
+                <button data-filter="Event">Event</button>
+                <button data-filter="Commercial">Commercial</button>
+                <button data-filter="Drone">Drone</button>
+            </div>
+
+            <!-- GALLERY GRID -->
+            <div class="portfolio-grid">
+
+                <!-- Football Item (Foto Baru Kamu) -->
+                <div class="portfolio-item" data-category="Football" data-aos="zoom-in">
+                    <img src="images/foto1.jpg" alt="Football Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Football</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <!-- Wedding Items -->
+                <div class="portfolio-item" data-category="Wedding" data-aos="zoom-in">
+                    <img src="images/gallery1.jpg" alt="Wedding Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Wedding</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="Wedding" data-aos="zoom-in">
+                    <img src="images/gallery2.jpg" alt="Wedding Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Wedding</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <!-- Graduation Items -->
+                <div class="portfolio-item" data-category="Graduation" data-aos="zoom-in">
+                    <img src="images/gallery3.jpg" alt="Graduation Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Graduation</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="Graduation" data-aos="zoom-in">
+                    <img src="images/gallery4.jpg" alt="Graduation Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Graduation</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <!-- Commercial Items -->
+                <div class="portfolio-item" data-category="Commercial" data-aos="zoom-in">
+                    <img src="images/gallery5.jpg" alt="Commercial Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Commercial</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <!-- Event Items -->
+                <div class="portfolio-item" data-category="Event" data-aos="zoom-in">
+                    <img src="images/gallery6.jpg" alt="Event Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Event</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <!-- Drone Items -->
+                <div class="portfolio-item" data-category="Drone" data-aos="zoom-in">
+                    <img src="images/gallery7.jpg" alt="Drone Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Drone</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <!-- Commercial Item 2 -->
+                <div class="portfolio-item" data-category="Commercial" data-aos="zoom-in">
+                    <img src="images/gallery8.jpg" alt="Commercial Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Commercial</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <!-- Prewedding Items -->
+                <div class="portfolio-item" data-category="Prewedding" data-aos="zoom-in">
+                    <img src="images/gallery9.jpg" alt="Prewedding Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Prewedding</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="Prewedding" data-aos="zoom-in">
+                    <img src="images/gallery10.jpg" alt="Prewedding Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Prewedding</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <!-- Event Item 2 -->
+                <div class="portfolio-item" data-category="Event" data-aos="zoom-in">
+                    <img src="images/gallery11.jpg" alt="Event Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Event</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+                <!-- Drone Item 2 -->
+                <div class="portfolio-item" data-category="Drone" data-aos="zoom-in">
+                    <img src="images/gallery12.jpg" alt="Drone Photography" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Drone</h3>
+                        <p>Click to View</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Pricing CTA -->
+            <div class="gallery-bottom" data-aos="fade-up">
+                <a href="pricing.html" class="btn-primary">
+                    View Pricing Packages
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox">
+        <span id="closeLightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Preview">
     </div>
 
-</div>
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Capture Your Story?</h2>
+            <p>Let's create unforgettable memories together.</p>
+            <a href="contact.html" class="btn-primary">Book Session</a>
+        </div>
+    </section>
 
-</section>
+    <!-- FOOTER -->
+    <footer>
+        <h2>RUNAWAY</h2>
+        <p>Capturing Moments. Creating Memories.</p>
 
-<section class="cta-section">
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
 
-<div class="container">
+        <p class="copyright">
+            &copy; 2026 Runaway Studio. All Rights Reserved.
+        </p>
+    </footer>
 
-<h2>
-
-Ready to Capture Your Story?
-
-</h2>
-
-<p>
-
-Let's create unforgettable memories together.
-
-</p>
-
-<a href="contact.html"
-class="btn-primary">
-
-Book Session
-
-</a>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-
-    <h2>RUNAWAY</h2>
-
-    <p>Capturing Moments. Creating Memories.</p>
-
-    <div class="footer-social">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
-
-    <p class="copyright">
-        © 2026 Runaway Studio. All Rights Reserved.
-    </p>
-
-</footer>
-
-<!-- SCRIPTS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-
-AOS.init({
-
-duration:1000,
-once:true
-
-});
-
-</script>
-<script src="script.js"></script>
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
