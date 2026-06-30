@@ -6,42 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Runaway Studio</title>
 
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
 
-    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="assets/logo.png" alt="Runaway Studio Logo">
 
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- AOS Animation CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
 <body>
 
-    <!-- PRELOADER -->
     <div id="preloader">
         <div class="loader"></div>
     </div>
 
-    <!-- Background Effects -->
     <div class="background-blur blur1"></div>
     <div class="background-blur blur2"></div>
     <canvas id="particles"></canvas>
 
-    <!-- NAVBAR -->
     <header>
         <nav class="navbar">
             <div class="logo">
                 RUNAWAY
             </div>
             
-            <!-- Hamburger Button untuk Mobile View -->
             <div id="menu-btn" class="fas fa-bars"></div>
             
             <div class="nav-menu">
@@ -55,7 +47,6 @@
         </nav>
     </header>
 
-    <!-- HERO -->
     <section class="gallery-hero">
         <div class="overlay"></div>
         <div class="container">
@@ -66,11 +57,9 @@
         </div>
     </section>
 
-    <!-- FILTER & GALLERY SECTION -->
     <section class="portfolio-section">
         <div class="container">
 
-            <!-- FILTER BUTTONS -->
             <div class="portfolio-filter" data-aos="fade-up">
                 <button class="active" data-filter="all">All</button>
                 <button data-filter="Wedding">Wedding</button>
@@ -82,19 +71,16 @@
                 <button data-filter="Drone">Drone</button>
             </div>
 
-            <!-- GALLERY GRID -->
             <div class="portfolio-grid">
 
-                <!-- Football Item (Foto Baru Kamu) -->
                 <div class="portfolio-item" data-category="Football" data-aos="zoom-in">
-                    <img src="images/foto1.jpg" alt="Football Photography" loading="lazy">
+                    <img src="images/foto1.JPG" alt="Football Photography" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Football</h3>
                         <p>Click to View</p>
                     </div>
                 </div>
 
-                <!-- Wedding Items -->
                 <div class="portfolio-item" data-category="Wedding" data-aos="zoom-in">
                     <img src="images/gallery1.jpg" alt="Wedding Photography" loading="lazy">
                     <div class="portfolio-overlay">
@@ -111,7 +97,6 @@
                     </div>
                 </div>
 
-                <!-- Graduation Items -->
                 <div class="portfolio-item" data-category="Graduation" data-aos="zoom-in">
                     <img src="images/gallery3.jpg" alt="Graduation Photography" loading="lazy">
                     <div class="portfolio-overlay">
@@ -128,7 +113,6 @@
                     </div>
                 </div>
 
-                <!-- Commercial Items -->
                 <div class="portfolio-item" data-category="Commercial" data-aos="zoom-in">
                     <img src="images/gallery5.jpg" alt="Commercial Photography" loading="lazy">
                     <div class="portfolio-overlay">
@@ -137,7 +121,6 @@
                     </div>
                 </div>
 
-                <!-- Event Items -->
                 <div class="portfolio-item" data-category="Event" data-aos="zoom-in">
                     <img src="images/gallery6.jpg" alt="Event Photography" loading="lazy">
                     <div class="portfolio-overlay">
@@ -146,7 +129,6 @@
                     </div>
                 </div>
 
-                <!-- Drone Items -->
                 <div class="portfolio-item" data-category="Drone" data-aos="zoom-in">
                     <img src="images/gallery7.jpg" alt="Drone Photography" loading="lazy">
                     <div class="portfolio-overlay">
@@ -155,7 +137,6 @@
                     </div>
                 </div>
 
-                <!-- Commercial Item 2 -->
                 <div class="portfolio-item" data-category="Commercial" data-aos="zoom-in">
                     <img src="images/gallery8.jpg" alt="Commercial Photography" loading="lazy">
                     <div class="portfolio-overlay">
@@ -164,7 +145,6 @@
                     </div>
                 </div>
 
-                <!-- Prewedding Items -->
                 <div class="portfolio-item" data-category="Prewedding" data-aos="zoom-in">
                     <img src="images/gallery9.jpg" alt="Prewedding Photography" loading="lazy">
                     <div class="portfolio-overlay">
@@ -181,7 +161,6 @@
                     </div>
                 </div>
 
-                <!-- Event Item 2 -->
                 <div class="portfolio-item" data-category="Event" data-aos="zoom-in">
                     <img src="images/gallery11.jpg" alt="Event Photography" loading="lazy">
                     <div class="portfolio-overlay">
@@ -190,7 +169,6 @@
                     </div>
                 </div>
 
-                <!-- Drone Item 2 -->
                 <div class="portfolio-item" data-category="Drone" data-aos="zoom-in">
                     <img src="images/gallery12.jpg" alt="Drone Photography" loading="lazy">
                     <div class="portfolio-overlay">
@@ -201,7 +179,6 @@
 
             </div>
 
-            <!-- Bottom Pricing CTA -->
             <div class="gallery-bottom" data-aos="fade-up">
                 <a href="pricing.html" class="btn-primary">
                     View Pricing Packages
@@ -211,13 +188,11 @@
         </div>
     </section>
 
-    <!-- LIGHTBOX MODAL -->
     <div id="lightbox">
         <span id="closeLightbox">&times;</span>
         <img id="lightbox-img" src="" alt="Preview">
     </div>
 
-    <!-- CTA SECTION -->
     <section class="cta-section">
         <div class="container">
             <h2>Ready to Capture Your Story?</h2>
@@ -226,7 +201,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <h2>RUNAWAY</h2>
         <p>Capturing Moments. Creating Memories.</p>
@@ -243,7 +217,6 @@
         </p>
     </footer>
 
-    <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
