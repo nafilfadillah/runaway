@@ -361,34 +361,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ==============================
-    // LIGHTBOX
+    // LIGHTBOX INTERNAL (DOM LOADED)
     // ==============================
     const gallery = document.querySelectorAll(".portfolio-item img");
 
     if (gallery.length) {
 
-        const lightbox = document.createElement("div");
-        lightbox.id = "lightbox";
+        const lightboxContainer = document.getElementById("lightbox") || document.createElement("div");
+        if (!document.getElementById("lightbox")) {
+            lightboxContainer.id = "lightbox";
+            lightboxContainer.innerHTML = `
+                <span id="closeLightbox">&times;</span>
+                <img id="lightboxImg">
+            `;
+            document.body.appendChild(lightboxContainer);
+        }
 
-        lightbox.innerHTML = `
-            <span id="closeLightbox">&times;</span>
-            <img id="lightboxImg">
-        `;
-
-        document.body.appendChild(lightbox);
-
-        const lightboxImg = document.getElementById("lightboxImg");
+        const lightboxImgInner = document.getElementById("lightboxImg");
 
         gallery.forEach(img => {
             img.addEventListener("click", () => {
-                lightbox.classList.add("active");
-                lightboxImg.src = img.src;
+                lightboxContainer.classList.add("active");
+                if (lightboxImgInner) lightboxImgInner.src = img.src;
             });
         });
 
-        lightbox.addEventListener("click", (e) => {
+        lightboxContainer.addEventListener("click", (e) => {
             if (e.target.id === "lightbox" || e.target.id === "closeLightbox") {
-                lightbox.classList.remove("active");
+                lightboxContainer.classList.remove("active");
             }
         });
     }
@@ -430,7 +430,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==============================
     const testimonials = document.querySelectorAll(".testimonial-card");
 
-    let current = 0;
+    let currentTestimonial = 0;
 
     function showTestimonial() {
 
@@ -438,9 +438,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         testimonials.forEach(card => card.style.display = "none");
 
-        testimonials[current].style.display = "block";
+        testimonials[currentTestimonial].style.display = "block";
 
-        current = (current + 1) % testimonials.length;
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
     }
 
     if (testimonials.length) {
@@ -474,13 +474,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==============================
 // WHATSAPP CONFIG
 // ==============================
-
 const PHONE = "6285774447910";
 
 // ==============================
 // BOOKING FORM
 // ==============================
-
 document.getElementById("waForm")?.addEventListener("submit", function(e){
 
     e.preventDefault();
@@ -510,7 +508,6 @@ Saya ingin booking:
 // ==============================
 // CONTACT FORM
 // ==============================
-
 function sendToWA(e){
 
     e.preventDefault();
@@ -540,7 +537,6 @@ Saya ingin booking:
 // ==============================
 // PRICING PAGE
 // ==============================
-
 function bookWA(packageName){
 
     const text =
@@ -564,36 +560,32 @@ Terima kasih 🙏`;
 
 }
 
-// ===== LIGHTBOX =====
-
+// ===== LIGHTBOX (EXTERNAL SAFE CHECK WITH OPTIONAL CHAINING) =====
 const galleryImages = document.querySelectorAll(".portfolio-item img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const closeLightbox = document.getElementById("closeLightbox");
 
 galleryImages.forEach(img => {
-
     img.addEventListener("click", () => {
-
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-
+        if (lightbox && lightboxImg) {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        }
     });
-
 });
 
-closeLightbox.onclick = () => {
+// Menggunakan tanda ?. (Optional chaining) agar jika null tidak merusak halaman
+if (closeLightbox) {
+    closeLightbox.onclick = () => {
+        if (lightbox) lightbox.style.display = "none";
+    };
+}
 
-    lightbox.style.display = "none";
-
-};
-
-lightbox.onclick = (e) => {
-
-    if(e.target === lightbox){
-
-        lightbox.style.display = "none";
-
-    }
-
-};
+if (lightbox) {
+    lightbox.onclick = (e) => {
+        if(e.target === lightbox){
+            lightbox.style.display = "none";
+        }
+    };
+}
