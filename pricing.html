@@ -2,93 +2,107 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Runaway Studio</title>
 
-<title>Pricing | Runaway Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">RUNAWAY</div>
+    <div class="background-blur blur1"></div>
+    <div class="background-blur blur2"></div>
+    <canvas id="particles"></canvas>
 
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="services.html">Services</a>
-        <a href="pricing.html" class="active">Pricing</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</nav>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                RUNAWAY
+            </div>
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="services.html">Services</a>
+                <a href="pricing.html" class="active">Pricing</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-<!-- PRICING -->
-<section class="pricing">
+    <section class="pricing">
+        <div class="container">
 
-    <div class="container">
+            <div class="section-title">
+                <h2 data-aos="fade-up">Photography Packages</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Choose the package that fits your moment</p>
+            </div>
 
-        <div class="section-title">
-            <h2>Photography Packages</h2>
-            <p>Choose the package that fits your moment</p>
-        </div>
+            <div class="pricing-grid">
 
-        <div class="pricing-grid">
+                <div class="price-card" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>Bronze Package</h3>
+                    <h2>Rp999K</h2>
+                    <p>Basic documentation for small events</p>
+                    <a href="#" class="btn-primary" onclick="bookWA('Bronze Package')">
+                        Book Now
+                    </a>
+                </div>
 
-            <div class="price-card">
-                <h3>Bronze Package</h3>
-                <h2>Rp999K</h2>
-                <p>Basic documentation for small events</p>
+                <div class="price-card popular" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="badge">Most Popular</div>
+                    <h3>Silver Package</h3>
+                    <h2>Rp2.499K</h2>
+                    <p>Perfect for weddings & medium events</p>
+                    <a href="#" class="btn-primary" onclick="bookWA('Silver Package')">
+                        Book Now
+                    </a>
+                </div>
 
-                <a href="#" class="btn btn-primary"
-                   onclick="bookWA('Bronze Package')">
-                   Book Now
+                <div class="price-card" data-aos="zoom-in" data-aos-delay="500">
+                    <h3>Gold Package</h3>
+                    <h2>Rp4.999K</h2>
+                    <p>Full professional cinematic coverage</p>
+                    <a href="#" class="btn-primary" onclick="bookWA('Gold Package')">
+                        Book Now
+                    </a>
+                </div>
+
+            </div>
+
+            <div style="text-align:center; margin-top:60px;" data-aos="fade-up" data-aos-delay="600">
+                <a href="#" class="btn-primary" onclick="bookWA('General Inquiry')">
+                    Chat & Book via WhatsApp
                 </a>
             </div>
 
-            <div class="price-card popular">
-                <div class="badge">Most Popular</div>
-
-                <h3>Silver Package</h3>
-                <h2>Rp2.499K</h2>
-                <p>Perfect for weddings & medium events</p>
-
-                <a href="#" class="btn btn-primary"
-                   onclick="bookWA('Silver Package')">
-                   Book Now
-                </a>
-            </div>
-
-            <div class="price-card">
-                <h3>Gold Package</h3>
-                <h2>Rp4.999K</h2>
-                <p>Full professional cinematic coverage</p>
-
-                <a href="#" class="btn btn-primary"
-                   onclick="bookWA('Gold Package')">
-                   Book Now
-                </a>
-            </div>
-
         </div>
+    </section>
 
-        <!-- GLOBAL BUTTON -->
-        <div style="text-align:center; margin-top:60px;">
-            <a href="#" class="btn btn-primary"
-               onclick="bookWA('General Inquiry')">
-                Chat & Book via WhatsApp
-            </a>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Runaway Studio. All Rights Reserved.</p>
         </div>
+    </footer>
 
-    </div>
-
-</section>
-
-<script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
