@@ -82,7 +82,7 @@ position:fixed;
 
 inset:0;
 
-background:#fdfcfa;
+background:#faf6ee;
 
 display:flex;
 
@@ -251,7 +251,7 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    background:#fdfcfa;
+    background:#faf6ee;
 
     color:#15181f;
 
@@ -271,7 +271,7 @@ body{
 
 ::-webkit-scrollbar-track{
 
-    background:#ede9df;
+    background:#e8e1cf;
 
 }
 
@@ -299,9 +299,9 @@ body{
 
 --secondary:#15181f;
 
---dark:#fdfcfa;
+--dark:#faf6ee;
 
---card:#fdfcfa;
+--card:#faf6ee;
 
 --glass:rgba(0,0,0,.035);
 
@@ -826,6 +826,14 @@ section{
 
     color:#15181f;
 
+    background:var(--gradient);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    display:inline-block;
+
 }
 
 .section-title::after{
@@ -852,7 +860,7 @@ section{
 
 #about{
 
-    background:#f4f1ea;
+    background:#f0ebdd;
 
 }
 
@@ -946,7 +954,7 @@ section{
 
 .about-grid div{
 
-    background:#fdfcfa;
+    background:#faf6ee;
 
     border:1px solid rgba(0,0,0,.07);
 
@@ -992,7 +1000,7 @@ section{
 
 #services{
 
-    background:#fdfcfa;
+    background:#faf6ee;
 
 }
 
@@ -1012,7 +1020,7 @@ section{
 
     overflow:hidden;
 
-    background:#fdfcfa;
+    background:#faf6ee;
 
     border:1px solid rgba(0,0,0,.08);
 
@@ -1116,11 +1124,11 @@ section{
 
     background:linear-gradient(
         135deg,
-        rgba(189,154,46,.1),
-        rgba(0,0,0,.02)
+        #1a1d27,
+        #15181f
     );
 
-    border:1px solid rgba(0,0,0,.07);
+    border:1px solid rgba(212,175,55,.2);
 
     padding:70px;
 
@@ -1136,13 +1144,13 @@ section{
 
     margin-bottom:20px;
 
-    color:#15181f;
+    color:#ffffff;
 
 }
 
 .cta p{
 
-    color:var(--muted);
+    color:#c5c8d1;
 
     max-width:650px;
 
@@ -1250,7 +1258,7 @@ font-size:2rem;
 =================================== */
 
 #portfolio{
-    background:#f4f1ea;
+    background:#f0ebdd;
 }
 
 .portfolio-filter{
@@ -1263,7 +1271,7 @@ font-size:2rem;
 
 .portfolio-filter button{
 
-    background:#fdfcfa;
+    background:#faf6ee;
 
     color:#15181f;
 
@@ -1381,7 +1389,23 @@ font-size:2rem;
 
 #testimonial{
 
-    background:#fdfcfa;
+    background:#15181f;
+
+}
+
+#testimonial .section-title h2{
+
+    background:none;
+
+    -webkit-text-fill-color:#ffffff;
+
+    color:#ffffff;
+
+}
+
+#testimonial .section-title p{
+
+    color:var(--primary);
 
 }
 
@@ -1397,11 +1421,11 @@ font-size:2rem;
 
 .testimonial-card{
 
-    background:#fdfcfa;
+    background:rgba(255,255,255,.05);
 
-    border:1px solid rgba(0,0,0,.08);
+    border:1px solid rgba(255,255,255,.1);
 
-    box-shadow:0 14px 32px rgba(189,154,46,.09);
+    box-shadow:none;
 
     border-radius:25px;
 
@@ -1415,7 +1439,9 @@ font-size:2rem;
 
     transform:translateY(-10px);
 
-    border-color:rgba(189,154,46,.5);
+    border-color:rgba(212,175,55,.5);
+
+    background:rgba(255,255,255,.07);
 
 }
 
@@ -1431,7 +1457,7 @@ font-size:2rem;
 
 .testimonial-card p{
 
-    color:var(--muted);
+    color:#c5c8d1;
 
     margin-bottom:25px;
 
@@ -1439,7 +1465,7 @@ font-size:2rem;
 
 .testimonial-card h3{
 
-    color:#15181f;
+    color:#ffffff;
 
 }
 
@@ -1454,7 +1480,7 @@ font-size:2rem;
 =================================== */
 
 #contact{
-    background: #f4f1ea;
+    background: #f0ebdd;
     padding: 120px 8%;
 }
 
@@ -1497,7 +1523,7 @@ font-size:2rem;
     width: 100%;
     padding: 16px 18px;
 
-    background: #fdfcfa;
+    background: #faf6ee;
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 14px;
 
@@ -1553,7 +1579,7 @@ font-size:2rem;
 
 footer{
 
-    background:#ede9df;
+    background:#e8e1cf;
 
     padding:70px 0 40px;
 
@@ -1603,7 +1629,7 @@ footer p{
 
     border-radius:50%;
 
-    background:#fdfcfa;
+    background:#faf6ee;
 
     border:1px solid rgba(0,0,0,.08);
 
@@ -1739,7 +1765,7 @@ color:#f1f1f1;
 
 padding:100px 8%;
 
-background:#fdfcfa;
+background:#faf6ee;
 
 }
 
@@ -1759,7 +1785,7 @@ margin-bottom:70px;
 
 .portfolio-filter button{
 
-background:#ede9df;
+background:#e8e1cf;
 
 border:none;
 
@@ -1965,7 +1991,7 @@ PRICING
 
 .pricing {
     padding: 150px 8%;
-    background:#fdfcfa;
+    background:#faf6ee;
 }
 
 .pricing-grid {
@@ -1977,7 +2003,7 @@ PRICING
 
 .price-card {
     position: relative;
-    background: #fdfcfa;
+    background: #faf6ee;
     padding: 45px;
     border-radius: 25px;
     box-shadow: 0 14px 34px rgba(189,154,46,.1);
@@ -2025,7 +2051,7 @@ SERVICES
 .services-hero {
     padding: 180px 20px 100px;
     text-align: center;
-    background:#f4f1ea;
+    background:#f0ebdd;
 }
 
 .services-hero h1 {
@@ -2042,7 +2068,7 @@ SERVICES
 
 .services {
     padding: 100px 8%;
-    background:#fdfcfa;
+    background:#faf6ee;
 }
 
 .service-grid {
@@ -2055,7 +2081,7 @@ SERVICES
     padding: 45px;
     text-align: center;
     border-radius: 25px;
-    background: #fdfcfa;
+    background: #faf6ee;
     border: 1px solid rgba(0,0,0,.08);
     box-shadow: 0 14px 32px rgba(189,154,46,.09);
     transition: .4s;
@@ -2109,7 +2135,7 @@ ABOUT PAGE
 .about-hero{
     padding:180px 8% 80px;
     text-align:center;
-    background:#f4f1ea;
+    background:#f0ebdd;
 }
 
 .about-hero h1{
@@ -2127,7 +2153,7 @@ ABOUT PAGE
 /* MAIN */
 .about-page{
     padding:80px 8% 120px;
-    background:#fdfcfa;
+    background:#faf6ee;
 }
 
 .about-wrapper{
@@ -2166,7 +2192,7 @@ ABOUT PAGE
 }
 
 .about-grid div{
-    background:#fdfcfa;
+    background:#faf6ee;
     border:1px solid rgba(0,0,0,.08);
     box-shadow:0 10px 26px rgba(189,154,46,.08);
     padding:25px;
@@ -2188,7 +2214,7 @@ ABOUT PAGE
 }
 
 .vm-card{
-    background:#f4f1ea;
+    background:#f0ebdd;
     border:1px solid rgba(0,0,0,.08);
     padding:40px;
     border-radius:25px;
@@ -2241,7 +2267,7 @@ ABOUT PAGE
     padding:10px 22px;
     border-radius:30px;
     border:none;
-    background:#ede9df;
+    background:#e8e1cf;
     color:#15181f;
     cursor:pointer;
     transition:.3s;
@@ -2310,13 +2336,13 @@ ABOUT PAGE
 
     padding:120px 8%;
 
-    background:#fdfcfa;
+    background:#faf6ee;
 
 }
 
 .cta-box{
 
-    background:linear-gradient(135deg,#f4f1ea,#eef0f3);
+    background:linear-gradient(135deg,#f0ebdd,#eef0f3);
 
     border:1px solid rgba(0,0,0,.07);
 
