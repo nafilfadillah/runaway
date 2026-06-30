@@ -82,7 +82,7 @@ position:fixed;
 
 inset:0;
 
-background:#ffffff;
+background:#fdfcfa;
 
 display:flex;
 
@@ -251,7 +251,7 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    background:#ffffff;
+    background:#fdfcfa;
 
     color:#15181f;
 
@@ -271,7 +271,7 @@ body{
 
 ::-webkit-scrollbar-track{
 
-    background:#f1f2f4;
+    background:#ede9df;
 
 }
 
@@ -299,9 +299,9 @@ body{
 
 --secondary:#15181f;
 
---dark:#ffffff;
+--dark:#fdfcfa;
 
---card:#ffffff;
+--card:#fdfcfa;
 
 --glass:rgba(0,0,0,.035);
 
@@ -349,7 +349,7 @@ body{
 
     filter:blur(140px);
 
-    opacity:.14;
+    opacity:.22;
 
     z-index:-2;
 
@@ -838,7 +838,7 @@ section{
 
 #about{
 
-    background:#f8f9fa;
+    background:#f4f1ea;
 
 }
 
@@ -932,11 +932,11 @@ section{
 
 .about-grid div{
 
-    background:#ffffff;
+    background:#fdfcfa;
 
     border:1px solid rgba(0,0,0,.07);
 
-    box-shadow:0 6px 20px rgba(0,0,0,.05);
+    box-shadow:0 10px 28px rgba(189,154,46,.08);
 
     border-radius:18px;
 
@@ -978,7 +978,7 @@ section{
 
 #services{
 
-    background:#ffffff;
+    background:#fdfcfa;
 
 }
 
@@ -998,11 +998,13 @@ section{
 
     overflow:hidden;
 
-    background:#ffffff;
+    background:#fdfcfa;
 
     border:1px solid rgba(0,0,0,.08);
 
-    box-shadow:0 8px 24px rgba(0,0,0,.05);
+    border-top:3px solid rgba(189,154,46,.55);
+
+    box-shadow:0 14px 32px rgba(189,154,46,.09);
 
     border-radius:25px;
 
@@ -1234,7 +1236,7 @@ font-size:2rem;
 =================================== */
 
 #portfolio{
-    background:#f8f9fa;
+    background:#f4f1ea;
 }
 
 .portfolio-filter{
@@ -1247,7 +1249,7 @@ font-size:2rem;
 
 .portfolio-filter button{
 
-    background:#ffffff;
+    background:#fdfcfa;
 
     color:#15181f;
 
@@ -1365,7 +1367,7 @@ font-size:2rem;
 
 #testimonial{
 
-    background:#ffffff;
+    background:#fdfcfa;
 
 }
 
@@ -1381,11 +1383,11 @@ font-size:2rem;
 
 .testimonial-card{
 
-    background:#ffffff;
+    background:#fdfcfa;
 
     border:1px solid rgba(0,0,0,.08);
 
-    box-shadow:0 8px 24px rgba(0,0,0,.05);
+    box-shadow:0 14px 32px rgba(189,154,46,.09);
 
     border-radius:25px;
 
@@ -1438,7 +1440,7 @@ font-size:2rem;
 =================================== */
 
 #contact{
-    background: #f8f9fa;
+    background: #f4f1ea;
     padding: 120px 8%;
 }
 
@@ -1481,7 +1483,7 @@ font-size:2rem;
     width: 100%;
     padding: 16px 18px;
 
-    background: #ffffff;
+    background: #fdfcfa;
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 14px;
 
@@ -1537,7 +1539,7 @@ font-size:2rem;
 
 footer{
 
-    background:#f1f2f4;
+    background:#ede9df;
 
     padding:70px 0 40px;
 
@@ -1587,7 +1589,7 @@ footer p{
 
     border-radius:50%;
 
-    background:#ffffff;
+    background:#fdfcfa;
 
     border:1px solid rgba(0,0,0,.08);
 
@@ -1723,7 +1725,7 @@ color:#f1f1f1;
 
 padding:100px 8%;
 
-background:#ffffff;
+background:#fdfcfa;
 
 }
 
@@ -1743,7 +1745,7 @@ margin-bottom:70px;
 
 .portfolio-filter button{
 
-background:#f1f2f4;
+background:#ede9df;
 
 border:none;
 
@@ -1949,7 +1951,7 @@ PRICING
 
 .pricing {
     padding: 150px 8%;
-    background:#ffffff;
+    background:#fdfcfa;
 }
 
 .pricing-grid {
@@ -1961,10 +1963,10 @@ PRICING
 
 .price-card {
     position: relative;
-    background: #ffffff;
+    background: #fdfcfa;
     padding: 45px;
     border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    box-shadow: 0 14px 34px rgba(189,154,46,.1);
     text-align: center;
     transition: .4s;
     border: 1px solid rgba(0,0,0,.08);
@@ -2009,7 +2011,7 @@ SERVICES
 .services-hero {
     padding: 180px 20px 100px;
     text-align: center;
-    background:#f8f9fa;
+    background:#f4f1ea;
 }
 
 .services-hero h1 {
@@ -2026,7 +2028,7 @@ SERVICES
 
 .services {
     padding: 100px 8%;
-    background:#ffffff;
+    background:#fdfcfa;
 }
 
 .service-grid {
@@ -2039,9 +2041,9 @@ SERVICES
     padding: 45px;
     text-align: center;
     border-radius: 25px;
-    background: #ffffff;
+    background: #fdfcfa;
     border: 1px solid rgba(0,0,0,.08);
-    box-shadow: 0 8px 24px rgba(0,0,0,.05);
+    box-shadow: 0 14px 32px rgba(189,154,46,.09);
     transition: .4s;
 }
 
@@ -2093,7 +2095,7 @@ ABOUT PAGE
 .about-hero{
     padding:180px 8% 80px;
     text-align:center;
-    background:#f8f9fa;
+    background:#f4f1ea;
 }
 
 .about-hero h1{
@@ -2111,7 +2113,7 @@ ABOUT PAGE
 /* MAIN */
 .about-page{
     padding:80px 8% 120px;
-    background:#ffffff;
+    background:#fdfcfa;
 }
 
 .about-wrapper{
@@ -2150,9 +2152,9 @@ ABOUT PAGE
 }
 
 .about-grid div{
-    background:#ffffff;
+    background:#fdfcfa;
     border:1px solid rgba(0,0,0,.08);
-    box-shadow:0 6px 18px rgba(0,0,0,.05);
+    box-shadow:0 10px 26px rgba(189,154,46,.08);
     padding:25px;
     border-radius:18px;
     text-align:center;
@@ -2172,7 +2174,7 @@ ABOUT PAGE
 }
 
 .vm-card{
-    background:#f8f9fa;
+    background:#f4f1ea;
     border:1px solid rgba(0,0,0,.08);
     padding:40px;
     border-radius:25px;
@@ -2225,7 +2227,7 @@ ABOUT PAGE
     padding:10px 22px;
     border-radius:30px;
     border:none;
-    background:#f1f2f4;
+    background:#ede9df;
     color:#15181f;
     cursor:pointer;
     transition:.3s;
@@ -2294,13 +2296,13 @@ ABOUT PAGE
 
     padding:120px 8%;
 
-    background:#ffffff;
+    background:#fdfcfa;
 
 }
 
 .cta-box{
 
-    background:linear-gradient(135deg,#f8f9fa,#eef0f3);
+    background:linear-gradient(135deg,#f4f1ea,#eef0f3);
 
     border:1px solid rgba(0,0,0,.07);
 
