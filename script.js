@@ -471,7 +471,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// ==============================
+// WHATSAPP CONFIG
+// ==============================
+
+const PHONE = "6285774447910";
+
+// ==============================
+// BOOKING FORM
+// ==============================
+
 document.getElementById("waForm")?.addEventListener("submit", function(e){
+
     e.preventDefault();
 
     const name = document.getElementById("name").value;
@@ -479,23 +490,29 @@ document.getElementById("waForm")?.addEventListener("submit", function(e){
     const date = document.getElementById("date").value;
     const message = document.getElementById("message").value;
 
-    const phoneNumber = "6281234567890"; // GANTI NOMOR KAMU
-
     const text =
 `Halo Runaway Studio 👋
+
 Saya ingin booking:
 
-Nama: ${name}
-Event: ${event}
-Tanggal: ${date}
-Pesan: ${message}`;
+👤 Nama: ${name}
+📸 Event: ${event}
+📅 Tanggal: ${date}
+📝 Pesan: ${message}`;
 
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+    window.open(
+        `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`,
+        "_blank"
+    );
 
-    window.open(url, "_blank");
 });
 
+// ==============================
+// CONTACT FORM
+// ==============================
+
 function sendToWA(e){
+
     e.preventDefault();
 
     const name = document.getElementById("name").value;
@@ -503,66 +520,46 @@ function sendToWA(e){
     const date = document.getElementById("date").value;
     const message = document.getElementById("message").value;
 
-    const phone = "6285774447910";
-
     const text =
 `Halo Runaway Studio 👋
 
-Nama: ${name}
-Event: ${event}
-Tanggal: ${date}
-Pesan: ${message}`;
+Saya ingin booking:
 
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank");
+👤 Nama: ${name}
+📸 Event: ${event}
+📅 Tanggal: ${date}
+📝 Pesan: ${message}`;
+
+    window.open(
+        `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`,
+        "_blank"
+    );
+
 }
+
+// ==============================
+// PRICING PAGE
+// ==============================
 
 function bookWA(packageName){
 
-    const phone = "6285774447910";
-
     const text =
 `Halo Runaway Studio 👋
 
-Saya ingin booking:
+Saya ingin booking paket:
 
-Paket: ${packageName}
+📦 Paket: ${packageName}
 
-Mohon info ketersediaan jadwal & detail harga.
+Mohon info mengenai:
+• Ketersediaan jadwal
+• Detail harga
+• Proses booking
+
 Terima kasih 🙏`;
 
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(
+        `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`,
+        "_blank"
+    );
+
 }
-
-const filterBtns = document.querySelectorAll(".portfolio-filter button");
-const items = document.querySelectorAll(".portfolio-item");
-
-filterBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-
-        filterBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const filter = btn.dataset.filter;
-
-        items.forEach(item => {
-
-            const category = item.dataset.category;
-
-            if(filter === "all" || category === filter){
-                item.style.display = "block";
-                setTimeout(() => {
-                    item.style.opacity = "1";
-                    item.style.transform = "scale(1)";
-                }, 100);
-            } else {
-                item.style.opacity = "0";
-                item.style.transform = "scale(.8)";
-                setTimeout(() => {
-                    item.style.display = "none";
-                }, 300);
-            }
-
-        });
-
-    });
-});
