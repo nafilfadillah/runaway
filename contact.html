@@ -1,43 +1,294 @@
-<section id="contact" class="contact">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="container">
+<head>
 
-        <div class="section-title">
-            <h2>Book Your Session</h2>
-            <p>Fill the form and we will contact you via WhatsApp</p>
-        </div>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="contact-grid">
+<title>Contact | Runaway Studio</title>
 
-            <!-- INFO -->
-            <div class="contact-info">
-                <h3>Runaway Studio</h3>
-                <p>Photography • Videography • Creative Studio</p>
+<meta name="description" content="Contact Runaway Studio">
+<meta name="author" content="Runaway Studio">
 
-                <p><i class="fa fa-phone"></i> 0857-7444-7910</p>
-                <p><i class="fa fa-envelope"></i> runawaystudio@gmail.com</p>
-                <p><i class="fa fa-location-dot"></i> Indonesia</p>
-            </div>
+<link rel="icon" href="assets/logo.png">
 
-            <!-- FORM BOOKING -->
-            <form class="contact-form" onsubmit="sendToWA(event)">
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-                <input type="text" id="name" placeholder="Your Name" required>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-                <input type="text" id="event" placeholder="Event Type (Wedding, Graduation, dll)" required>
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-                <input type="date" id="date" required>
+<!-- AOS -->
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
-                <textarea id="message" placeholder="Additional Message (optional)"></textarea>
+<link rel="stylesheet" href="style.css">
 
-                <button type="submit" class="btn-primary">
-                    Send via WhatsApp
-                </button>
+</head>
 
-            </form>
+<body>
 
-        </div>
+<!-- BACKGROUND -->
 
-    </div>
+<div class="background-blur blur1"></div>
+<div class="background-blur blur2"></div>
+
+<canvas id="particles"></canvas>
+
+<!-- NAVBAR -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+RUNAWAY
+</div>
+
+<div class="nav-menu">
+
+<a href="index.html">Home</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="services.html">Services</a>
+
+<a href="pricing.html">Pricing</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html" class="active">Contact</a>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="about-hero">
+
+<div class="container">
+
+<h1 data-aos="fade-up">
+
+Book Your Session
+
+</h1>
+
+<p data-aos="fade-up" data-aos-delay="300">
+
+Let's create unforgettable memories together.
+
+</p>
+
+</div>
 
 </section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<div class="section-title" data-aos="fade-up">
+
+<h2>Get In Touch</h2>
+
+<p>
+
+Fill in the booking form and we'll contact you via WhatsApp.
+
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<!-- INFO -->
+
+<div class="contact-info" data-aos="fade-right">
+
+<h3>Runaway Studio</h3>
+
+<p>
+
+Premium Photography • Videography • Creative Studio
+
+</p>
+
+<div class="contact-item">
+
+<i class="fas fa-phone"></i>
+
+<span>0857-7444-7910</span>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fas fa-envelope"></i>
+
+<span>runawaystudio@gmail.com</span>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fas fa-location-dot"></i>
+
+<span>Indonesia</span>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fab fa-instagram"></i>
+
+<span>@runawaystudio</span>
+
+</div>
+
+</div>
+
+<!-- FORM -->
+
+<form
+class="contact-form"
+onsubmit="sendToWA(event)"
+data-aos="fade-left">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+type="text"
+id="event"
+placeholder="Event Type (Wedding, Graduation, Prewedding, Event)"
+required>
+
+<input
+type="date"
+id="date"
+required>
+
+<textarea
+id="message"
+placeholder="Additional Message (Optional)"></textarea>
+
+<button
+type="submit"
+class="btn-primary">
+
+<i class="fab fa-whatsapp"></i>
+
+Send via WhatsApp
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GOOGLE MAP -->
+
+<section class="map-section">
+
+<iframe
+src="https://www.google.com/maps?q=Indonesia&output=embed"
+loading="lazy"
+allowfullscreen>
+
+</iframe>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>
+
+RUNAWAY
+
+</h2>
+
+<p>
+
+Capturing Moments.
+Creating Memories.
+
+</p>
+
+<div class="footer-social">
+
+<a href="#">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-tiktok"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Runaway Studio.
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<!-- AOS -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+
+duration:1000,
+once:true
+
+});
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
