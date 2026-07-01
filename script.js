@@ -1,591 +1,208 @@
-// ======================================
-// RUNAWAY STUDIO - FULL JS (FIXED)
-// ======================================
+/* ===========================
+   RUNAWAY STUDIO — script.js
+=========================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+/* ── PARTICLES ─────────────────── */
+(function () {
+  const canvas = document.getElementById('particles');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
 
-    // ==============================
-    // AOS (SAFE CHECK)
-    // ==============================
-    if (typeof AOS !== "undefined") {
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function rand(min, max) { return Math.random() * (max - min) + min; }
+
+  function createParticles() {
+    particles = [];
+    const count = Math.floor(W / 12);
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: rand(0, W), y: rand(0, H),
+        r: rand(0.5, 2),
+        dx: rand(-0.3, 0.3), dy: rand(-0.3, 0.3),
+        alpha: rand(0.1, 0.5)
+      });
     }
+  }
 
-    // ==============================
-    // MOBILE MENU
-    // ==============================
-    const menuBtn = document.getElementById("menu-btn");
-    const navMenu = document.querySelector(".nav-menu");
-
-    if (menuBtn && navMenu) {
-        menuBtn.onclick = () => {
-            navMenu.classList.toggle("show");
-        };
-    }
-
-    // ==============================
-    // NAVBAR SCROLL EFFECT
-    // ==============================
-    const navbar = document.querySelector(".navbar");
-
-    window.addEventListener("scroll", () => {
-        if (!navbar) return;
-
-        if (window.scrollY > 50) {
-            navbar.style.background = "rgba(5,7,13,.92)";
-            navbar.style.backdropFilter = "blur(25px)";
-            navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,.35)";
-        } else {
-            navbar.style.background = "rgba(5,7,13,.55)";
-            navbar.style.boxShadow = "none";
-        }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(189,154,46,${p.alpha})`;
+      ctx.fill();
+      p.x += p.dx; p.y += p.dy;
+      if (p.x < 0 || p.x > W) p.dx *= -1;
+      if (p.y < 0 || p.y > H) p.dy *= -1;
     });
-
-    // ==============================
-    // TYPING ANIMATION
-    // ==============================
-    const typing = document.getElementById("typing");
-
-    const words = [
-        "Wedding Photography",
-        "Cinematic Videography",
-        "Graduation Session",
-        "Creative Studio",
-        "Commercial Production"
-    ];
-
-    let wordIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
-
-    function typeEffect() {
-        if (!typing) return;
-
-        const current = words[wordIndex];
-
-        if (!deleting) {
-            typing.textContent = current.substring(0, charIndex++);
-            if (charIndex > current.length) {
-                deleting = true;
-                setTimeout(typeEffect, 1500);
-                return;
-            }
-        } else {
-            typing.textContent = current.substring(0, charIndex--);
-            if (charIndex < 0) {
-                deleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-            }
-        }
-
-        setTimeout(typeEffect, deleting ? 50 : 90);
-    }
-
-    typeEffect();
-
-    // ==============================
-    // SCROLL PROGRESS BAR
-    // ==============================
-    const progress = document.createElement("div");
-    progress.id = "progress";
-    document.body.appendChild(progress);
-
-    window.addEventListener("scroll", () => {
-        const total = document.documentElement.scrollHeight - window.innerHeight;
-        const value = (window.scrollY / total) * 100;
-        progress.style.width = value + "%";
-    });
-
-    // ==============================
-    // BACK TO TOP BUTTON
-    // ==============================
-    const topBtn = document.createElement("button");
-    topBtn.innerHTML = "↑";
-    topBtn.id = "topBtn";
-    document.body.appendChild(topBtn);
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 400) {
-            topBtn.classList.add("show");
-        } else {
-            topBtn.classList.remove("show");
-        }
-    });
-
-    topBtn.onclick = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    };
-
-    // ==============================
-    // ACTIVE MENU
-    // ==============================
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-menu a");
-
-    window.addEventListener("scroll", () => {
-        let current = "";
-
-        sections.forEach(section => {
-            const top = section.offsetTop - 120;
-
-            if (window.scrollY >= top) {
-                current = section.getAttribute("id");
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove("active");
-
-            if (link.getAttribute("href") === "#" + current) {
-                link.classList.add("active");
-            }
-        });
-    });
-
-    // ==============================
-    // PARTICLE BACKGROUND
-    // ==============================
-    const canvas = document.getElementById("particles");
-
-    if (canvas) {
-
-        const ctx = canvas.getContext("2d");
-        let particles = [];
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        window.addEventListener("resize", () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.radius = Math.random() * 2 + 1;
-                this.dx = (Math.random() - 0.5) * 0.5;
-                this.dy = (Math.random() - 0.5) * 0.5;
-            }
-
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = "rgba(212,175,55,.65)";
-                ctx.fill();
-            }
-
-            update() {
-                this.x += this.dx;
-                this.y += this.dy;
-
-                if (this.x < 0 || this.x > canvas.width) this.dx *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.dy *= -1;
-
-                this.draw();
-            }
-        }
-
-        for (let i = 0; i < 80; i++) {
-            particles.push(new Particle());
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => p.update());
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-    }
-
-    // ==============================
-    // CURSOR GLOW
-    // ==============================
-    const glow = document.createElement("div");
-    glow.className = "cursor-glow";
-    document.body.appendChild(glow);
-
-    window.addEventListener("mousemove", (e) => {
-        glow.style.left = e.clientX + "px";
-        glow.style.top = e.clientY + "px";
-    });
-
-    // ==============================
-    // PARALLAX HERO
-    // ==============================
-    const hero = document.querySelector(".hero");
-
-    window.addEventListener("scroll", () => {
-        if (hero) {
-            const offset = window.scrollY;
-            hero.style.backgroundPositionY = offset * 0.4 + "px";
-        }
-    });
-
-    // ==============================
-    // COUNTER
-    // ==============================
-    const counters = document.querySelectorAll(".about-grid h3");
-
-    const speed = 60;
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-
-                const counter = entry.target;
-                const target = counter.innerText;
-
-                const number = parseInt(target.replace(/\D/g, ""));
-                const suffix = target.replace(/[0-9]/g, "");
-
-                let count = 0;
-
-                const update = () => {
-                    count += Math.ceil(number / speed);
-
-                    if (count < number) {
-                        counter.innerText = count + suffix;
-                        requestAnimationFrame(update);
-                    } else {
-                        counter.innerText = number + suffix;
-                    }
-                };
-
-                update();
-                observer.unobserve(counter);
-            }
-        });
-    });
-
-    counters.forEach(c => observer.observe(c));
-
-    // ==============================
-    // REVEAL ANIMATION
-    // ==============================
-    const reveals = document.querySelectorAll(".service-card,.portfolio-item,.testimonial-card");
-
-    const revealObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    });
-
-    reveals.forEach(el => revealObserver.observe(el));
-
-    // ==============================
-    // FLOATING EFFECT SERVICE CARD
-    // ==============================
-    document.querySelectorAll(".service-card").forEach(card => {
-
-        card.addEventListener("mousemove", (e) => {
-
-            const rect = card.getBoundingClientRect();
-
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            card.style.transform =
-                `rotateX(${-(y - rect.height / 2) / 20}deg)
-                 rotateY(${(x - rect.width / 2) / 20}deg)
-                 translateY(-10px)`;
-        });
-
-        card.addEventListener("mouseleave", () => {
-            card.style.transform = "rotateX(0) rotateY(0) translateY(0)";
-        });
-
-    });
-
-    // ==============================
-    // BUTTON RIPPLE EFFECT
-    // ==============================
-    document.querySelectorAll(".btn-primary").forEach(btn => {
-
-        btn.addEventListener("click", function (e) {
-
-            const ripple = document.createElement("span");
-            const rect = this.getBoundingClientRect();
-
-            ripple.style.left = e.clientX - rect.left + "px";
-            ripple.style.top = e.clientY - rect.top + "px";
-            ripple.className = "ripple";
-
-            this.appendChild(ripple);
-
-            setTimeout(() => ripple.remove(), 700);
-        });
-
-    });
-
-    // ==============================
-    // IMAGE LOADING EFFECT
-    // ==============================
-    const images = document.querySelectorAll("img");
-
-    const imgObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = "scale(1)";
-            }
-        });
-    });
-
-    images.forEach(img => {
-        img.style.opacity = 0;
-        img.style.transform = "scale(.95)";
-        img.style.transition = ".7s";
-        imgObserver.observe(img);
-    });
-
-    // ==============================
-    // PRELOADER REMOVE
-    // ==============================
-    window.addEventListener("load", () => {
-        const loader = document.getElementById("preloader");
-        if (loader) {
-            loader.style.opacity = "0";
-            setTimeout(() => loader.remove(), 700);
-        }
-    });
-
-    // ==============================
-    // LIGHTBOX INTERNAL (DOM LOADED)
-    // ==============================
-    const gallery = document.querySelectorAll(".portfolio-item img");
-
-    if (gallery.length) {
-
-        const lightboxContainer = document.getElementById("lightbox") || document.createElement("div");
-        if (!document.getElementById("lightbox")) {
-            lightboxContainer.id = "lightbox";
-            lightboxContainer.innerHTML = `
-                <span id="closeLightbox">&times;</span>
-                <img id="lightboxImg">
-            `;
-            document.body.appendChild(lightboxContainer);
-        }
-
-        const lightboxImgInner = document.getElementById("lightboxImg");
-
-        gallery.forEach(img => {
-            img.addEventListener("click", () => {
-                lightboxContainer.classList.add("active");
-                if (lightboxImgInner) lightboxImgInner.src = img.src;
-            });
-        });
-
-        lightboxContainer.addEventListener("click", (e) => {
-            if (e.target.id === "lightbox" || e.target.id === "closeLightbox") {
-                lightboxContainer.classList.remove("active");
-            }
-        });
-    }
-
-    // ==============================
-    // PORTFOLIO FILTER
-    // ==============================
-    const filterBtns = document.querySelectorAll(".portfolio-filter button");
-    const items = document.querySelectorAll(".portfolio-item");
-
-    if (filterBtns.length && items.length) {
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-
-                filterBtns.forEach(b => b.classList.remove("active"));
-                btn.classList.add("active");
-
-                const value = btn.innerText.toLowerCase();
-
-                items.forEach(item => {
-
-                    const category = (item.dataset.category || "").toLowerCase();
-
-                    if (value === "all" || category === value) {
-                        item.style.display = "block";
-                        item.style.opacity = "1";
-                    } else {
-                        item.style.display = "none";
-                    }
-                });
-
-            });
-        });
-    }
-
-    // ==============================
-    // TESTIMONIAL SLIDER
-    // ==============================
-    const testimonials = document.querySelectorAll(".testimonial-card");
-
-    let currentTestimonial = 0;
-
-    function showTestimonial() {
-
-        if (!testimonials.length) return;
-
-        testimonials.forEach(card => card.style.display = "none");
-
-        testimonials[currentTestimonial].style.display = "block";
-
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    }
-
-    if (testimonials.length) {
-        showTestimonial();
-        setInterval(showTestimonial, 5000);
-    }
-
-    // ==============================
-    // WHATSAPP FLOATING
-    // ==============================
-    const wa = document.createElement("a");
-
-    wa.href="https://wa.me/6285774447910?text=Halo%20saya%20mau%20booking%20foto";
-    wa.target = "_blank";
-    wa.className = "whatsapp";
-    wa.innerHTML = '<i class="fab fa-whatsapp"></i>';
-
-    document.body.appendChild(wa);
-
-    // ==============================
-    // YEAR AUTO
-    // ==============================
-    const year = document.getElementById("year");
-
-    if (year) {
-        year.innerText = new Date().getFullYear();
-    }
-
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  createParticles();
+  draw();
+  window.addEventListener('resize', () => { resize(); createParticles(); });
+})();
+
+/* ── PRELOADER ──────────────────── */
+window.addEventListener('load', () => {
+  const pre = document.getElementById('preloader');
+  if (pre) {
+    pre.style.opacity = '0';
+    setTimeout(() => pre.style.display = 'none', 700);
+  }
 });
 
-// ==============================
-// WHATSAPP CONFIG
-// ==============================
-const PHONE = "6285774447910";
+/* ── SCROLL PROGRESS BAR ────────── */
+window.addEventListener('scroll', () => {
+  const prog = document.getElementById('progress');
+  if (prog) {
+    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    prog.style.width = scrolled + '%';
+  }
 
-// ==============================
-// BOOKING FORM
-// ==============================
-document.getElementById("waForm")?.addEventListener("submit", function(e){
+  /* top button */
+  const btn = document.getElementById('topBtn');
+  if (btn) btn.classList.toggle('show', window.scrollY > 400);
 
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const event = document.getElementById("event").value;
-    const date = document.getElementById("date").value;
-    const message = document.getElementById("message").value;
-
-    const text =
-`Halo Runaway Studio 👋
-
-Saya ingin booking:
-
-👤 Nama: ${name}
-📸 Event: ${event}
-📅 Tanggal: ${date}
-📝 Pesan: ${message}`;
-
-    window.open(
-        `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`,
-        "_blank"
-    );
-
+  /* active nav link on scroll */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-menu a');
+  sections.forEach(sec => {
+    const top = sec.offsetTop - 100;
+    const bottom = top + sec.offsetHeight;
+    if (window.scrollY >= top && window.scrollY < bottom) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector(`.nav-menu a[href="#${sec.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
 });
 
-// ==============================
-// CONTACT FORM
-// ==============================
-function sendToWA(e){
+/* ── TOP BUTTON ─────────────────── */
+const topBtn = document.getElementById('topBtn');
+if (topBtn) topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const event = document.getElementById("event").value;
-    const date = document.getElementById("date").value;
-    const message = document.getElementById("message").value;
-
-    const text =
-`Halo Runaway Studio 👋
-
-Saya ingin booking:
-
-👤 Nama: ${name}
-📸 Event: ${event}
-📅 Tanggal: ${date}
-📝 Pesan: ${message}`;
-
-    window.open(
-        `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`,
-        "_blank"
-    );
-
+/* ── TYPING EFFECT ──────────────── */
+const typingEl = document.getElementById('typing');
+if (typingEl) {
+  const texts = ['Wedding Photography', 'Cinematic Videography', 'Graduation Moments', 'Commercial Branding'];
+  let i = 0, j = 0, del = false;
+  function type() {
+    const current = texts[i];
+    typingEl.textContent = del ? current.substring(0, j--) : current.substring(0, j++);
+    if (!del && j === current.length + 1) { del = true; setTimeout(type, 1200); return; }
+    if (del && j === 0) { del = false; i = (i + 1) % texts.length; }
+    setTimeout(type, del ? 60 : 100);
+  }
+  type();
 }
 
-// ==============================
-// PRICING PAGE
-// ==============================
-function bookWA(packageName){
+/* ── PORTFOLIO FILTER ───────────── */
+const filterBtns = document.querySelectorAll('.portfolio-filter button');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-    const text =
-`Halo Runaway Studio 👋
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
 
-Saya ingin booking paket:
+    const cat = btn.textContent.trim().toLowerCase();
 
-📦 Paket: ${packageName}
-
-Mohon info mengenai:
-• Ketersediaan jadwal
-• Detail harga
-• Proses booking
-
-Terima kasih 🙏`;
-
-    window.open(
-        `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`,
-        "_blank"
-    );
-
-}
-
-// ===== LIGHTBOX (EXTERNAL SAFE CHECK WITH OPTIONAL CHAINING) =====
-const galleryImages = document.querySelectorAll(".portfolio-item img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const closeLightbox = document.getElementById("closeLightbox");
-
-galleryImages.forEach(img => {
-    img.addEventListener("click", () => {
-        if (lightbox && lightboxImg) {
-            lightbox.style.display = "flex";
-            lightboxImg.src = img.src;
-        }
+    portfolioItems.forEach(item => {
+      const itemCat = (item.dataset.category || '').toLowerCase();
+      if (cat === 'all' || itemCat === cat) {
+        item.style.display = 'block';
+        item.style.animation = 'fadeIn .4s ease';
+      } else {
+        item.style.display = 'none';
+      }
     });
+  });
 });
 
-// Menggunakan tanda ?. (Optional chaining) agar jika null tidak merusak halaman
-if (closeLightbox) {
-    closeLightbox.onclick = () => {
-        if (lightbox) lightbox.style.display = "none";
-    };
+/* ── FAQ ACCORDION ──────────────── */
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    faqItems.forEach(f => {
+      f.classList.remove('open');
+      f.querySelector('.faq-answer').style.maxHeight = null;
+      f.querySelector('.fas').classList.replace('fa-minus', 'fa-plus');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      item.querySelector('.faq-answer').style.maxHeight =
+        item.querySelector('.faq-answer').scrollHeight + 'px';
+      item.querySelector('.fas').classList.replace('fa-plus', 'fa-minus');
+    }
+  });
+});
+
+/* ── CONTACT FORM → WHATSAPP ────── */
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const name    = document.getElementById('contactName')?.value.trim() || '';
+    const email   = document.getElementById('contactEmail')?.value.trim() || '';
+    const event   = document.getElementById('contactEvent')?.value.trim() || '';
+    const message = document.getElementById('contactMessage')?.value.trim() || '';
+
+    const text = `Halo Runaway Studio! 👋\n\nSaya ingin booking sesi:\n\n*Nama:* ${name}\n*Email:* ${email}\n*Jenis Event:* ${event}\n*Pesan:* ${message}\n\nMohon infonya ya, terima kasih!`;
+    const url = `https://wa.me/6285774447910?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  });
+}
+
+/* ── LIGHTBOX ───────────────────── */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox?.querySelector('img');
+const closeBtn = document.getElementById('closeLightbox');
+
+document.querySelectorAll('.portfolio-item img').forEach(img => {
+  img.addEventListener('click', () => {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+    setTimeout(() => lightbox.classList.add('active'), 10);
+  });
+});
+
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+    setTimeout(() => lightbox.style.display = 'none', 400);
+  });
 }
 
 if (lightbox) {
-    lightbox.onclick = (e) => {
-        if(e.target === lightbox){
-            lightbox.style.display = "none";
-        }
-    };
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('active');
+      setTimeout(() => lightbox.style.display = 'none', 400);
+    }
+  });
 }
+
+/* ── MOBILE MENU ────────────────── */
+const menuBtn = document.getElementById('menu-btn');
+const navMenu = document.querySelector('.nav-menu');
+if (menuBtn && navMenu) {
+  menuBtn.addEventListener('click', () => {
+    navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+  });
+}
+
+/* ── FADE IN ANIMATION ──────────── */
+const style = document.createElement('style');
+style.textContent = `@keyframes fadeIn { from { opacity:0; transform:scale(.96); } to { opacity:1; transform:scale(1); } }`;
+document.head.appendChild(style);
