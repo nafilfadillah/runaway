@@ -1,165 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | Runaway Studio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
-
-    <link rel="icon" href="assets/logo.png" alt="Runaway Studio Logo">
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing | Runaway Studio</title>
+<meta name="description" content="Transparent pricing for photography & videography packages by Runaway Studio">
+<link rel="icon" href="images/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="background-blur blur1"></div>
-    <div class="background-blur blur2"></div>
-    <canvas id="particles"></canvas>
+<div class="background-blur blur1"></div>
+<div class="background-blur blur2"></div>
+<canvas id="particles"></canvas>
+<div id="progress"></div>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                RUNAWAY
-            </div>
-            
-            <div id="menu-btn" class="fas fa-bars"></div>
-            
-            <div class="nav-menu">
-                <a href="index.html">Home</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="services.html">Services</a>
-                <a href="pricing.html" class="active">Pricing</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </nav>
-    </header>
+<!-- NAVBAR -->
+<header>
+<nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="images/logo.jpg" alt="Runaway Studio">
+    <span>RUNAWAY</span>
+  </a>
+  <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html" class="active">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html" class="btn-primary">Book Now</a>
+  </div>
+  <button id="menu-btn"><i class="fas fa-bars"></i></button>
+</nav>
+</header>
 
-    <section class="pricing-hero">
-        <div class="container">
-            <h1 data-aos="fade-up">Pricing Packages</h1>
-            <p data-aos="fade-up" data-aos-delay="200">
-                Choose the perfect package for your unforgettable moments.
-            </p>
-        </div>
-    </section>
+<!-- HERO -->
+<section style="padding:160px 0 80px;text-align:center;background:var(--bg2);">
+  <div class="container">
+    <p class="section-tag" data-aos="fade-down">Transparent Pricing</p>
+    <h1 style="font-family:'Playfair Display',serif;font-size:3.6rem;color:var(--text);margin-bottom:14px;" data-aos="fade-up">
+      Choose Your <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Package</span>
+    </h1>
+    <p style="color:var(--muted);max-width:560px;margin:0 auto;" data-aos="fade-up" data-aos-delay="200">
+      Harga transparan tanpa biaya tersembunyi. Pilih paket yang sesuai kebutuhanmu.
+    </p>
+  </div>
+</section>
 
-    <section class="pricing">
-        <div class="container">
+<!-- PHOTOGRAPHY PACKAGES -->
+<section class="pricing">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <p>Photography</p>
+      <h2>Photo Packages</h2>
+    </div>
 
-            <div class="section-title">
-                <h2 data-aos="fade-up">Photography Packages</h2>
-                <p data-aos="fade-up" data-aos-delay="200">Choose the package that fits your moment</p>
-            </div>
+    <div class="pricing-grid">
 
-            <div class="pricing-grid">
+      <div class="price-card" data-aos="fade-up">
+        <h3>Basic</h3>
+        <p style="color:var(--muted);font-size:.88rem;">Cocok untuk sesi sederhana</p>
+        <h2>Rp 1.5 Jt</h2>
+        <ul>
+          <li><i class="fas fa-check"></i> 2 jam sesi</li>
+          <li><i class="fas fa-check"></i> 1 lokasi</li>
+          <li><i class="fas fa-check"></i> 50 foto edited</li>
+          <li><i class="fas fa-check"></i> Preview 24 jam</li>
+          <li><i class="fas fa-check"></i> Soft file via Google Drive</li>
+          <li style="opacity:.4;"><i class="fas fa-times"></i> Makeup artist</li>
+          <li style="opacity:.4;"><i class="fas fa-times"></i> Drone</li>
+        </ul>
+        <a href="booking.html" class="btn-outline">Book Basic</a>
+      </div>
 
-                <div class="price-card" data-aos="zoom-in" data-aos-delay="100">
-                    <h3>Bronze Package</h3>
-                    <h2>Rp999K</h2>
-                    <p>Basic documentation for small events</p>
-                    
-                    <ul>
-                        <li><i class="fa fa-check"></i> 2 Hours Session</li>
-                        <li><i class="fa fa-check"></i> 80 Edited Photos</li>
-                        <li><i class="fa fa-check"></i> Google Drive Delivery</li>
-                        <li><i class="fa fa-check"></i> Basic Color Correction</li>
-                    </ul>
+      <div class="price-card popular" data-aos="fade-up" data-aos-delay="150">
+        <span class="popular-badge"><i class="fas fa-fire"></i> Most Popular</span>
+        <h3>Standard</h3>
+        <p style="color:var(--muted);font-size:.88rem;">Paling banyak dipilih klien kami</p>
+        <h2>Rp 3 Jt</h2>
+        <ul>
+          <li><i class="fas fa-check"></i> 4 jam sesi</li>
+          <li><i class="fas fa-check"></i> 2 lokasi</li>
+          <li><i class="fas fa-check"></i> 100 foto edited</li>
+          <li><i class="fas fa-check"></i> Preview 24 jam</li>
+          <li><i class="fas fa-check"></i> Soft file + cetak 5R 10 lembar</li>
+          <li><i class="fas fa-check"></i> 1 outfit change</li>
+          <li style="opacity:.4;"><i class="fas fa-times"></i> Drone</li>
+        </ul>
+        <a href="booking.html" class="btn-primary">Book Standard</a>
+      </div>
 
-                    <a href="javascript:void(0)" class="btn-primary" onclick="bookWA('Bronze Package')">
-                        Book Now
-                    </a>
-                </div>
+      <div class="price-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Premium</h3>
+        <p style="color:var(--muted);font-size:.88rem;">Pengalaman fotografi terlengkap</p>
+        <h2>Rp 6 Jt</h2>
+        <ul>
+          <li><i class="fas fa-check"></i> Full day (8 jam)</li>
+          <li><i class="fas fa-check"></i> Bebas lokasi</li>
+          <li><i class="fas fa-check"></i> 200+ foto edited</li>
+          <li><i class="fas fa-check"></i> Preview 24 jam</li>
+          <li><i class="fas fa-check"></i> Soft file + album premium</li>
+          <li><i class="fas fa-check"></i> Drone add-on</li>
+          <li><i class="fas fa-check"></i> 2 fotografer</li>
+        </ul>
+        <a href="booking.html" class="btn-outline">Book Premium</a>
+      </div>
 
-                <div class="price-card popular" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="badge">Most Popular</div>
-                    <h3>Silver Package</h3>
-                    <h2>Rp2.499K</h2>
-                    <p>Perfect for weddings & medium events</p>
-                    
-                    <ul>
-                        <li><i class="fa fa-check"></i> 4 Hours Session</li>
-                        <li><i class="fa fa-check"></i> 150 Edited Photos</li>
-                        <li><i class="fa fa-check"></i> Cinematic Video</li>
-                        <li><i class="fa fa-check"></i> Drone Footage</li>
-                    </ul>
+    </div>
+  </div>
+</section>
 
-                    <a href="javascript:void(0)" class="btn-primary" onclick="bookWA('Silver Package')">
-                        Book Now
-                    </a>
-                </div>
+<!-- VIDEOGRAPHY PACKAGES -->
+<section style="padding:0 0 110px;background:var(--bg);">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <p>Videography</p>
+      <h2>Video Packages</h2>
+    </div>
 
-                <div class="price-card" data-aos="zoom-in" data-aos-delay="500">
-                    <h3>Gold Package</h3>
-                    <h2>Rp4.999K</h2>
-                    <p>Full professional cinematic coverage</p>
-                    
-                    <ul>
-                        <li><i class="fa fa-check"></i> Full Day Coverage</li>
-                        <li><i class="fa fa-check"></i> 2 Photographers</li>
-                        <li><i class="fa fa-check"></i> Videographer</li>
-                        <li><i class="fa fa-check"></i> Premium Album</li>
-                        <li><i class="fa fa-check"></i> Same Day Edit</li>
-                    </ul>
+    <div class="pricing-grid">
 
-                    <a href="javascript:void(0)" class="btn-primary" onclick="bookWA('Gold Package')">
-                        Book Now
-                    </a>
-                </div>
+      <div class="price-card" data-aos="fade-up">
+        <h3>Short Clip</h3>
+        <p style="color:var(--muted);font-size:.88rem;">Highlight singkat & cinematic</p>
+        <h2>Rp 2 Jt</h2>
+        <ul>
+          <li><i class="fas fa-check"></i> 2-3 jam shooting</li>
+          <li><i class="fas fa-check"></i> Video 2-3 menit</li>
+          <li><i class="fas fa-check"></i> Background music</li>
+          <li><i class="fas fa-check"></i> Color grading</li>
+          <li><i class="fas fa-check"></i> Delivery 14 hari kerja</li>
+          <li style="opacity:.4;"><i class="fas fa-times"></i> Full length video</li>
+          <li style="opacity:.4;"><i class="fas fa-times"></i> Drone</li>
+        </ul>
+        <a href="booking.html" class="btn-outline">Book Short Clip</a>
+      </div>
 
-            </div>
+      <div class="price-card popular" data-aos="fade-up" data-aos-delay="150">
+        <span class="popular-badge"><i class="fas fa-fire"></i> Best Value</span>
+        <h3>Cinematic</h3>
+        <p style="color:var(--muted);font-size:.88rem;">Video sinematik berkualitas tinggi</p>
+        <h2>Rp 5 Jt</h2>
+        <ul>
+          <li><i class="fas fa-check"></i> Full day shooting</li>
+          <li><i class="fas fa-check"></i> Video 5-8 menit</li>
+          <li><i class="fas fa-check"></i> Background music licensed</li>
+          <li><i class="fas fa-check"></i> Color grading premium</li>
+          <li><i class="fas fa-check"></i> Delivery 21 hari kerja</li>
+          <li><i class="fas fa-check"></i> 2 videografer</li>
+          <li style="opacity:.4;"><i class="fas fa-times"></i> Drone</li>
+        </ul>
+        <a href="booking.html" class="btn-primary">Book Cinematic</a>
+      </div>
 
-            <div style="text-align:center; margin-top:60px;" data-aos="fade-up" data-aos-delay="600">
-                <a href="javascript:void(0)" class="btn-primary" onclick="bookWA('General Inquiry')">
-                    Chat & Book via WhatsApp
-                </a>
-            </div>
+      <div class="price-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Full Production</h3>
+        <p style="color:var(--muted);font-size:.88rem;">Produksi video profesional penuh</p>
+        <h2>Rp 10 Jt</h2>
+        <ul>
+          <li><i class="fas fa-check"></i> Multi-day production</li>
+          <li><i class="fas fa-check"></i> Video 10-15 menit</li>
+          <li><i class="fas fa-check"></i> Full length + highlight</li>
+          <li><i class="fas fa-check"></i> Drone footage included</li>
+          <li><i class="fas fa-check"></i> Sound design</li>
+          <li><i class="fas fa-check"></i> Motion graphic</li>
+          <li><i class="fas fa-check"></i> 3 videografer</li>
+        </ul>
+        <a href="booking.html" class="btn-outline">Book Full Production</a>
+      </div>
 
-        </div>
-    </section>
+    </div>
 
-    <section class="cta">
-        <h2 data-aos="fade-up">Ready to Capture Your Special Moments?</h2>
-        <p data-aos="fade-up" data-aos-delay="200">
-            Contact us today and let's create unforgettable memories together.
-        </p>
-        <a href="contact.html" class="btn-primary" data-aos="zoom-in" data-aos-delay="400">
-            Book Your Session
-        </a>
-    </section>
+    <!-- NOTE -->
+    <div style="background:var(--white);border:1px solid var(--border);border-left:4px solid var(--gold2);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:24px 28px;margin-top:50px;max-width:700px;margin-left:auto;margin-right:auto;" data-aos="fade-up">
+      <p style="font-weight:600;color:var(--text);margin-bottom:8px;"><i class="fas fa-info-circle" style="color:var(--gold);margin-right:8px;"></i>Catatan Penting</p>
+      <p style="color:var(--muted);font-size:.9rem;line-height:1.75;">
+        Semua harga di atas adalah estimasi. Harga final dapat berbeda tergantung lokasi, durasi, dan kebutuhan spesifik. 
+        Hubungi kami untuk mendapatkan penawaran yang disesuaikan dengan kebutuhan kamu.
+        DP minimal 50% untuk mengamankan tanggal.
+      </p>
+    </div>
 
-    <footer>
-        <h2>RUNAWAY</h2>
-        <p>Capturing Moments. Creating Memories.</p>
-        
-        <div class="footer-social">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-        
-        <p class="copyright">
-            &copy; 2026 Runaway Studio. All Rights Reserved.
-        </p>
-    </footer>
+  </div>
+</section>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    </script>
-    <script src="script.js"></script>
+<!-- CTA -->
+<section class="cta-section" style="padding-top:0;">
+  <div class="container">
+    <div class="cta-box" data-aos="zoom-in">
+      <h2>Custom Package?</h2>
+      <p>Tidak menemukan paket yang sesuai? Kami menyediakan custom package sesuai budget dan kebutuhan spesifik kamu.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/6285774447910" target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i> Diskusi via WhatsApp</a>
+        <a href="contact.html" class="btn-outline">Kirim Pesan</a>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <h2>RUNAWAY</h2>
+    <p>Premium Photography & Videography Studio</p>
+    <div class="footer-social">
+      <a href="https://instagram.com/run_away_fg" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="https://youtube.com/@runawaysportainment" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/6285774447910" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p class="copyright">© 2026 RUNAWAY. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/6285774447910" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init({ duration:900, once:true, offset:80 });</script>
+<script src="script.js"></script>
 </body>
 </html>
