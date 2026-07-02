@@ -1,294 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Contact | Runaway Studio</title>
-
-<meta name="description" content="Contact Runaway Studio">
-<meta name="author" content="Runaway Studio">
-
-<link rel="icon" href="assets/logo.png">
-
-<!-- Google Font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-<!-- AOS -->
-<link rel="stylesheet"
-href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-
+<meta name="description" content="Contact Runaway Studio — Photography & Videography in Bogor, Jabodetabek">
+<link rel="icon" href="images/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-
-<!-- BACKGROUND -->
 
 <div class="background-blur blur1"></div>
 <div class="background-blur blur2"></div>
-
 <canvas id="particles"></canvas>
+<div id="progress"></div>
 
 <!-- NAVBAR -->
-
 <header>
-
 <nav class="navbar">
-
-<div class="logo">
-RUNAWAY
-</div>
-
-<div class="nav-menu">
-
-<a href="index.html">Home</a>
-
-<a href="gallery.html">Gallery</a>
-
-<a href="services.html">Services</a>
-
-<a href="pricing.html">Pricing</a>
-
-<a href="about.html">About</a>
-
-<a href="contact.html" class="active">Contact</a>
-
-</div>
-
+  <a href="index.html" class="logo">
+    <img src="images/logo.jpg" alt="Runaway Studio">
+    <span>RUNAWAY</span>
+  </a>
+  <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="booking.html" class="btn-primary">Book Now</a>
+  </div>
+  <button id="menu-btn"><i class="fas fa-bars"></i></button>
 </nav>
-
 </header>
 
 <!-- HERO -->
-
-<section class="about-hero">
-
-<div class="container">
-
-<h1 data-aos="fade-up">
-
-Book Your Session
-
-</h1>
-
-<p data-aos="fade-up" data-aos-delay="300">
-
-Let's create unforgettable memories together.
-
-</p>
-
-</div>
-
+<section style="padding:160px 0 80px;text-align:center;background:var(--bg2);">
+  <div class="container">
+    <p class="section-tag" data-aos="fade-down">Get In Touch</p>
+    <h1 style="font-family:'Playfair Display',serif;font-size:3.6rem;color:var(--text);margin-bottom:14px;" data-aos="fade-up">
+      Let's <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Connect</span>
+    </h1>
+    <p style="color:var(--muted);max-width:540px;margin:0 auto;" data-aos="fade-up" data-aos-delay="200">
+      Ada pertanyaan atau mau diskusi project? Kami siap membantu kamu — respons cepat dalam 1×24 jam.
+    </p>
+  </div>
 </section>
 
 <!-- CONTACT -->
+<section id="contact" style="background:var(--white);padding:100px 8%;">
+  <div class="container">
+  <div class="contact-grid">
 
-<section id="contact" class="contact">
+    <!-- INFO -->
+    <div data-aos="fade-right">
+      <h3 style="font-family:'Playfair Display',serif;font-size:2rem;color:var(--text);margin-bottom:12px;">Contact Information</h3>
+      <p style="color:var(--muted);margin-bottom:36px;line-height:1.8;">
+        Jangan ragu untuk menghubungi kami. Tim Runaway Studio siap membantu mewujudkan momen terbaik kamu.
+      </p>
 
-<div class="container">
+      <div class="contact-item">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <p style="font-weight:600;color:var(--text);margin-bottom:2px;">WhatsApp</p>
+          <p><a href="https://wa.me/6285774447910" target="_blank" style="color:var(--gold);text-decoration:none;">+62 857-7444-7910</a></p>
+        </div>
+      </div>
 
-<div class="section-title" data-aos="fade-up">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <p style="font-weight:600;color:var(--text);margin-bottom:2px;">Email</p>
+          <p><a href="mailto:hello@runaway.my.id" style="color:var(--gold);text-decoration:none;">hello@runaway.my.id</a></p>
+        </div>
+      </div>
 
-<h2>Get In Touch</h2>
+      <div class="contact-item">
+        <i class="fab fa-instagram"></i>
+        <div>
+          <p style="font-weight:600;color:var(--text);margin-bottom:2px;">Instagram</p>
+          <p><a href="https://instagram.com/run_away_fg" target="_blank" style="color:var(--gold);text-decoration:none;">@run_away_fg</a></p>
+        </div>
+      </div>
 
-<p>
+      <div class="contact-item">
+        <i class="fab fa-youtube"></i>
+        <div>
+          <p style="font-weight:600;color:var(--text);margin-bottom:2px;">YouTube</p>
+          <p><a href="https://youtube.com/@runawaysportainment" target="_blank" style="color:var(--gold);text-decoration:none;">@runawaysportainment</a></p>
+        </div>
+      </div>
 
-Fill in the booking form and we'll contact you via WhatsApp.
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <p style="font-weight:600;color:var(--text);margin-bottom:2px;">Lokasi</p>
+          <p>Bogor, Indonesia<br><span style="font-size:.82rem;color:var(--light);">Melayani area Jabodetabek & sekitarnya</span></p>
+        </div>
+      </div>
 
-</p>
+      <div class="contact-item">
+        <i class="fas fa-clock"></i>
+        <div>
+          <p style="font-weight:600;color:var(--text);margin-bottom:2px;">Jam Operasional</p>
+          <p>Senin – Sabtu: 08.00 – 20.00<br><span style="font-size:.82rem;color:var(--light);">Minggu: By appointment</span></p>
+        </div>
+      </div>
 
-</div>
+    </div>
 
-<div class="contact-grid">
+    <!-- FORM -->
+    <div data-aos="fade-left">
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:44px;box-shadow:var(--shadow-lg);">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--text);margin-bottom:6px;">Kirim Pesan</h3>
+        <p style="color:var(--muted);font-size:.88rem;margin-bottom:28px;">Isi form di bawah, kami akan balas via WhatsApp.</p>
 
-<!-- INFO -->
+        <form class="contact-form" id="contactForm">
+          <input type="text" id="contactName" placeholder="Nama Lengkap *" required>
+          <input type="email" id="contactEmail" placeholder="Email">
+          <input type="text" id="contactEvent" placeholder="Jenis Event (Wedding, Graduation, dll)">
+          <textarea id="contactMessage" placeholder="Ceritakan tentang kebutuhan project kamu..." style="min-height:140px;"></textarea>
+          <button type="submit" class="btn-primary">
+            <i class="fab fa-whatsapp"></i> Kirim via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
 
-<div class="contact-info" data-aos="fade-right">
+  </div>
 
-<h3>Runaway Studio</h3>
+  <!-- MAP -->
+  <div style="margin-top:70px;" data-aos="fade-up">
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--text);margin-bottom:20px;text-align:center;">
+      Find Us in <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Bogor</span>
+    </h3>
+    <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--border);">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126915.77490681174!2d106.7475527!3d-6.5970826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5c6f2453c0b%3A0xab8e357de7de95b5!2sBogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1700000000000"
+        width="100%" height="420"
+        style="border:none;display:block;"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
 
-<p>
-
-Premium Photography • Videography • Creative Studio
-
-</p>
-
-<div class="contact-item">
-
-<i class="fas fa-phone"></i>
-
-<span>0857-7444-7910</span>
-
-</div>
-
-<div class="contact-item">
-
-<i class="fas fa-envelope"></i>
-
-<span>runawaystudio@gmail.com</span>
-
-</div>
-
-<div class="contact-item">
-
-<i class="fas fa-location-dot"></i>
-
-<span>Indonesia</span>
-
-</div>
-
-<div class="contact-item">
-
-<i class="fab fa-instagram"></i>
-
-<span>@runawaystudio</span>
-
-</div>
-
-</div>
-
-<!-- FORM -->
-
-<form
-class="contact-form"
-onsubmit="sendToWA(event)"
-data-aos="fade-left">
-
-<input
-type="text"
-id="name"
-placeholder="Your Name"
-required>
-
-<input
-type="text"
-id="event"
-placeholder="Event Type (Wedding, Graduation, Prewedding, Event)"
-required>
-
-<input
-type="date"
-id="date"
-required>
-
-<textarea
-id="message"
-placeholder="Additional Message (Optional)"></textarea>
-
-<button
-type="submit"
-class="btn-primary">
-
-<i class="fab fa-whatsapp"></i>
-
-Send via WhatsApp
-
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- GOOGLE MAP -->
-
-<section class="map-section">
-
-<iframe
-src="https://www.google.com/maps?q=Indonesia&output=embed"
-loading="lazy"
-allowfullscreen>
-
-</iframe>
-
+  </div>
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-
-<h2>
-
-RUNAWAY
-
-</h2>
-
-<p>
-
-Capturing Moments.
-Creating Memories.
-
-</p>
-
-<div class="footer-social">
-
-<a href="#">
-
-<i class="fab fa-instagram"></i>
-
-</a>
-
-<a href="#">
-
-<i class="fab fa-tiktok"></i>
-
-</a>
-
-<a href="#">
-
-<i class="fab fa-youtube"></i>
-
-</a>
-
-<a href="#">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
-</div>
-
-<p class="copyright">
-
-© 2026 Runaway Studio.
-All Rights Reserved.
-
-</p>
-
+  <div class="container">
+    <h2>RUNAWAY</h2>
+    <p>Premium Photography & Videography Studio</p>
+    <div class="footer-social">
+      <a href="https://instagram.com/run_away_fg" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="https://youtube.com/@runawaysportainment" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/6285774447910" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p class="copyright">© 2026 RUNAWAY. All Rights Reserved.</p>
+  </div>
 </footer>
 
-<!-- AOS -->
+<a href="https://wa.me/6285774447910" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-
-AOS.init({
-
-duration:1000,
-once:true
-
-});
-
-</script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init({ duration:900, once:true, offset:80 });</script>
 <script src="script.js"></script>
-
 </body>
-
 </html>
