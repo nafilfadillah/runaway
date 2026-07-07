@@ -1196,3 +1196,205 @@ body.dark-mode .background-blur { opacity: .12; }
 body.dark-mode #page-transition {
   background: linear-gradient(135deg, #0d0f16, #1a1e2c);
 }
+
+/* ════════════════════════════════
+   RESPONSIVE — MOBILE FIRST FIX
+════════════════════════════════ */
+
+/* ── TABLET (max 1024px) ────────── */
+@media(max-width:1024px){
+
+  /* NAVBAR */
+  .navbar{ padding:14px 24px; }
+
+  /* HERO */
+  .hero h1{ font-size:3.2rem; }
+  .hero-desc{ font-size:.95rem; }
+
+  /* ABOUT */
+  #about .container{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+  .about-content{ text-align:center; }
+  .about-grid{ grid-template-columns:repeat(3,1fr); }
+
+  /* CONTACT */
+  .contact-grid{ grid-template-columns:1fr; gap:40px; }
+
+  /* BOOKING */
+  .booking-wrapper{ grid-template-columns:1fr; gap:40px; }
+
+  /* ABOUT PAGE */
+  .about-wrapper{ grid-template-columns:1fr; gap:40px; }
+  .vision-mission{ grid-template-columns:1fr; }
+
+  /* PORTFOLIO MASONRY */
+  .portfolio-grid.masonry{ column-count:2; }
+
+}
+
+/* ── MOBILE (max 768px) ─────────── */
+@media(max-width:768px){
+
+  body{ padding-top:70px; }
+
+  /* NAVBAR */
+  .navbar{ padding:12px 18px; }
+  .logo{ font-size:1.1rem; }
+  .logo img{ height:30px; }
+
+  /* HERO */
+  .hero{ min-height:100svh; }
+  .hero h1{ font-size:2.2rem; line-height:1.15; }
+  .hero-content > p:first-child{
+    font-size:.72rem;
+    letter-spacing:3px;
+    padding:6px 14px;
+  }
+  .hero-desc{ font-size:.88rem; margin:14px auto 28px; }
+  .hero-btn{
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+  }
+  .hero-btn .btn-primary,
+  .hero-btn .btn-outline{
+    width:100%;
+    max-width:280px;
+    justify-content:center;
+    padding:13px 28px;
+  }
+  .socials{ gap:10px; }
+  .socials a{ width:40px; height:40px; font-size:1rem; }
+
+  /* SECTION */
+  section{ padding:80px 0; }
+  .section-title{ margin-bottom:44px; }
+  .section-title h2{ font-size:1.8rem; }
+  .section-title p{ font-size:.75rem; }
+
+  /* ABOUT */
+  #about .container{ gap:36px; }
+  .about-content h2{ font-size:1.9rem; }
+  .about-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+  }
+  .about-grid div{ padding:18px 10px; }
+  .about-grid h3{ font-size:1.5rem; }
+  .about-grid p{ font-size:.75rem; }
+
+  /* SERVICES */
+  .services-grid{ grid-template-columns:1fr; gap:18px; }
+  .service-card{ padding:32px 24px; }
+  .service-card i{ width:52px; height:52px; font-size:1.3rem; }
+
+  /* PORTFOLIO */
+  .portfolio-filter{ gap:8px; }
+  .portfolio-filter button{
+    padding:8px 16px;
+    font-size:.78rem;
+  }
+  .portfolio-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .portfolio-grid.masonry{
+    column-count:1;
+  }
+  .portfolio-item img{ height:260px; }
+
+  /* TESTIMONIAL */
+  .testimonial-wrapper{ grid-template-columns:1fr; gap:16px; }
+  .testimonial-card{ padding:28px 22px; }
+  .testimonial-card::before{ font-size:4rem; }
+
+  /* FAQ */
+  .faq-question{ padding:16px 18px; }
+  .faq-question span{ font-size:.88rem; }
+  .faq-answer p{ padding:0 18px 16px; font-size:.88rem; }
+
+  /* CTA */
+  .cta{ padding:44px 24px; margin-top:50px; }
+  .cta h2{ font-size:1.8rem; }
+  .cta-box{ padding:40px 24px; }
+  .cta-box h2{ font-size:1.8rem; }
+  .cta-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+  .cta-buttons .btn-primary,
+  .cta-buttons .btn-outline{
+    width:100%;
+    max-width:300px;
+    justify-content:center;
+  }
+
+  /* CONTACT */
+  #contact{ padding:80px 5%; }
+  .contact-form input,
+  .contact-form textarea{ padding:13px 14px; }
+
+  /* BOOKING */
+  .booking-hero h1{ font-size:2.2rem; }
+  .booking-section{ padding:60px 5% 80px; }
+  .booking-form{ padding:28px 20px; }
+  .booking-pkg-item{ padding:12px 14px; }
+
+  /* ABOUT PAGE */
+  .about-hero{ padding:120px 5% 60px; }
+  .about-hero h1{ font-size:2.2rem; }
+  .about-page{ padding:60px 5% 80px; }
+  .about-content h2{ font-size:1.9rem; }
+  .vm-card{ padding:28px 22px; }
+
+  /* GALLERY */
+  .gallery-hero{ padding-top:120px; padding-bottom:70px; }
+  .gallery-hero h1{ font-size:2.2rem; }
+  .portfolio-section{ padding:70px 5%; }
+
+  /* SERVICES PAGE */
+  .services-hero{ padding:120px 5% 70px; }
+  .services-hero h1{ font-size:2.2rem; }
+  .services{ padding:70px 5%; }
+  .service-grid{ grid-template-columns:1fr; gap:16px; }
+
+  /* PRICING */
+  .pricing{ padding:100px 5% 80px; }
+  .pricing-grid{ grid-template-columns:1fr; gap:18px; }
+  .price-card{ padding:34px 24px; }
+  .price-card.popular{ transform:scale(1); }
+
+  /* FOOTER */
+  footer{ padding:50px 0 28px; }
+  footer h2{ font-size:1.5rem; }
+  .footer-social{ gap:10px; }
+  .footer-social a{ width:38px; height:38px; font-size:.9rem; }
+
+  /* FIXED BUTTONS */
+  #darkToggle{ right:18px; bottom:160px; width:42px; height:42px; }
+  #topBtn{ right:18px; bottom:100px; width:42px; height:42px; }
+  .whatsapp{ right:18px; bottom:28px; width:50px; height:50px; font-size:1.4rem; }
+
+  /* 404 & THANKYOU */
+  .notfound-number{ font-size:7rem; }
+  .notfound-inner h2{ font-size:1.6rem; }
+  .notfound-links{ flex-direction:column; align-items:center; }
+  .info-cards{ grid-template-columns:1fr; }
+  .thankyou-inner h1{ font-size:2rem; }
+  .thankyou-links{ flex-direction:column; align-items:center; }
+
+}
+
+/* ── SMALL MOBILE (max 420px) ───── */
+@media(max-width:420px){
+
+  .hero h1{ font-size:1.9rem; }
+  .section-title h2{ font-size:1.6rem; }
+  .about-grid{ grid-template-columns:1fr; }
+  .logo span{ font-size:1rem; letter-spacing:2px; }
+  .pricing-grid{ gap:14px; }
+  .price-card{ padding:28px 18px; }
+
+}
