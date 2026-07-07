@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terima Kasih! | Runaway Studio</title>
+<link rel="icon" href="images/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  .thankyou-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--bg);
+    padding: 40px 20px;
+  }
+  .thankyou-inner { max-width: 620px; }
+  .checkmark {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 28px;
+    font-size: 2.4rem;
+    color: #111;
+    animation: popIn .6s cubic-bezier(.175,.885,.32,1.275);
+    box-shadow: 0 16px 40px rgba(184,150,46,.3);
+  }
+  @keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .thankyou-inner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 14px;
+  }
+  .thankyou-inner > p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 36px;
+  }
+  .info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .info-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--gold2);
+    border-radius: var(--radius);
+    padding: 20px 14px;
+    text-align: center;
+  }
+  .info-card i {
+    font-size: 1.4rem;
+    color: var(--gold);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .info-card p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+  .info-card strong { color: var(--text); font-size: .88rem; display: block; margin-bottom: 4px; }
+  .thankyou-links {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  /* countdown */
+  .countdown { font-size: .82rem; color: var(--light); margin-top: 24px; }
+  .countdown span { color: var(--gold); font-weight: 700; }
+
+  @media(max-width:600px) {
+    .info-cards { grid-template-columns: 1fr; }
+    .thankyou-inner h1 { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="background-blur blur1"></div>
+<div class="background-blur blur2"></div>
+<canvas id="particles"></canvas>
+
+<!-- NAVBAR -->
+<header>
+<nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="images/logo.jpg" alt="Runaway Studio">
+    <span>RUNAWAY</span>
+  </a>
+  <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html" class="btn-primary">Book Now</a>
+  </div>
+  <button id="menu-btn"><i class="fas fa-bars"></i></button>
+</nav>
+</header>
+
+<section class="thankyou-section">
+  <div class="thankyou-inner">
+
+    <div class="checkmark">
+      <i class="fas fa-check"></i>
+    </div>
+
+    <h1>Terima Kasih!</h1>
+
+    <p>
+      Request booking kamu sudah kami terima.<br>
+      Tim Runaway Studio akan menghubungi kamu dalam <strong style="-webkit-text-fill-color:var(--gold);color:var(--gold);">1×24 jam</strong> untuk konfirmasi jadwal dan detail lebih lanjut.
+    </p>
+
+    <div class="info-cards">
+      <div class="info-card">
+        <i class="fas fa-clock"></i>
+        <strong>Respons Cepat</strong>
+        <p>Konfirmasi dalam 1×24 jam via WhatsApp</p>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-calendar-check"></i>
+        <strong>DP 50%</strong>
+        <p>Amankan tanggalmu setelah konfirmasi</p>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-camera"></i>
+        <strong>Siap Beraksi</strong>
+        <p>Tim kami siap mengabadikan momenmu</p>
+      </div>
+    </div>
+
+    <div class="thankyou-links">
+      <a href="index.html" class="btn-primary"><i class="fas fa-home"></i> Kembali ke Home</a>
+      <a href="https://wa.me/6285774447910" target="_blank" class="btn-outline"><i class="fab fa-whatsapp"></i> Chat via WhatsApp</a>
+    </div>
+
+    <p class="countdown">Redirect otomatis ke Home dalam <span id="timer">10</span> detik</p>
+
+  </div>
+</section>
+
+<button id="darkToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+<script src="script.js"></script>
+<script>
+  let t = 10;
+  const timerEl = document.getElementById('timer');
+  const interval = setInterval(() => {
+    t--;
+    if (timerEl) timerEl.textContent = t;
+    if (t <= 0) {
+      clearInterval(interval);
+      window.location.href = 'index.html';
+    }
+  }, 1000);
+</script>
+</body>
+</html>
