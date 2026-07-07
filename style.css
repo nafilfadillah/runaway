@@ -1084,3 +1084,115 @@ footer > div > p { color: var(--muted); font-size: .9rem; }
   .about-grid { grid-template-columns: 1fr; }
   .cta-buttons { flex-direction: column; align-items: center; }
 }
+
+/* ════════════════════════════════
+   DARK MODE
+════════════════════════════════ */
+body.dark-mode {
+  --bg:     #0d0f16;
+  --bg2:    #111420;
+  --bg3:    #0a0c12;
+  --white:  #141720;
+  --card:   #181c28;
+  --text:   #e8eaf0;
+  --muted:  #8a90a6;
+  --light:  #5a6075;
+  --border: rgba(212,175,55,.15);
+  --border2:rgba(255,255,255,.07);
+  --shadow-sm: 0 4px 16px rgba(0,0,0,.3);
+  --shadow-md: 0 12px 36px rgba(0,0,0,.4);
+  --shadow-lg: 0 24px 60px rgba(0,0,0,.5);
+}
+
+body.dark-mode .navbar {
+  background: rgba(13,15,22,.85);
+  border-bottom-color: rgba(212,175,55,.1);
+}
+
+body.dark-mode .service-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .price-card,
+body.dark-mode .booking-form,
+body.dark-mode .vm-card,
+body.dark-mode .faq-item {
+  background: var(--card);
+}
+
+body.dark-mode .faq-item { background: var(--card); }
+body.dark-mode .faq-item.open { background: #1e2333; }
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea,
+body.dark-mode .booking-form input,
+body.dark-mode .booking-form select,
+body.dark-mode .booking-form textarea {
+  background: rgba(255,255,255,.05);
+  color: var(--text);
+  border-color: var(--border2);
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder { color: var(--light); }
+
+body.dark-mode .portfolio-filter button {
+  background: rgba(255,255,255,.04);
+  color: var(--muted);
+  border-color: var(--border2);
+}
+
+body.dark-mode footer {
+  background: #08090e;
+  border-top-color: rgba(255,255,255,.06);
+}
+
+body.dark-mode .footer-social a {
+  background: rgba(255,255,255,.05);
+  color: var(--muted);
+  border-color: var(--border2);
+}
+
+body.dark-mode .cta {
+  background: linear-gradient(135deg, rgba(184,150,46,.12), rgba(255,255,255,.02));
+  border-color: rgba(212,175,55,.2);
+}
+
+body.dark-mode .cta-box {
+  background: linear-gradient(135deg, #141720, #1a1e2c);
+}
+
+body.dark-mode .about-grid div,
+body.dark-mode .booking-pkg-item { background: var(--card); }
+
+body.dark-mode .background-blur { opacity: .12; }
+
+/* ── DARK MODE TOGGLE BUTTON ────── */
+#darkToggle {
+  position: fixed;
+  bottom: 170px;
+  right: 28px;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  color: var(--gold);
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+#darkToggle:hover {
+  transform: translateY(-4px) rotate(20deg);
+  box-shadow: var(--shadow-md);
+  background: var(--gradient);
+  color: #111;
+  border-color: transparent;
+}
+
+/* ── PAGE TRANSITION DARK ───────── */
+body.dark-mode #page-transition {
+  background: linear-gradient(135deg, #0d0f16, #1a1e2c);
+}
