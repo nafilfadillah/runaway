@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Halaman Tidak Ditemukan | Runaway Studio</title>
+<link rel="icon" href="images/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  .notfound-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--bg2);
+    padding: 40px 20px;
+  }
+  .notfound-inner { max-width: 600px; }
+  .notfound-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 10rem;
+    line-height: 1;
+    font-weight: 800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    animation: pulse404 3s ease-in-out infinite;
+  }
+  @keyframes pulse404 {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .7; }
+  }
+  .notfound-inner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .notfound-inner p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 36px;
+  }
+  .notfound-links {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .notfound-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: float404 3s ease-in-out infinite;
+  }
+  @keyframes float404 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+</style>
+</head>
+<body>
+
+<div class="background-blur blur1"></div>
+<div class="background-blur blur2"></div>
+<canvas id="particles"></canvas>
+
+<!-- NAVBAR -->
+<header>
+<nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="images/logo.jpg" alt="Runaway Studio">
+    <span>RUNAWAY</span>
+  </a>
+  <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html" class="btn-primary">Book Now</a>
+  </div>
+  <button id="menu-btn"><i class="fas fa-bars"></i></button>
+</nav>
+</header>
+
+<section class="notfound-section">
+  <div class="notfound-inner">
+    <div class="notfound-icon">📷</div>
+    <div class="notfound-number">404</div>
+    <h2>Halaman Tidak Ditemukan</h2>
+    <p>
+      Sepertinya frame yang kamu cari sudah bergerak dari tempatnya.<br>
+      Yuk kembali ke halaman utama dan jelajahi karya kami.
+    </p>
+    <div class="notfound-links">
+      <a href="index.html" class="btn-primary"><i class="fas fa-home"></i> Kembali ke Home</a>
+      <a href="gallery.html" class="btn-outline"><i class="fas fa-images"></i> Lihat Gallery</a>
+    </div>
+  </div>
+</section>
+
+<button id="darkToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+<script src="script.js"></script>
+</body>
+</html>
